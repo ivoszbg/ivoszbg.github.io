@@ -14,7 +14,7 @@ const CONFIG = {
     github: {
       display: true, // Display GitHub projects?
       header: 'Github Projects',
-      mode: 'manual', // Mode can be: 'automatic' or 'manual'
+      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 6, // How many projects to display.
@@ -25,7 +25,7 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['ivoszbg/uniLoader', 'ivoszbg/linux', 'ivoszbg/u-boot', 'ivoszbg-temporg/edk2-msm8916', 'ivoszbg/LAEMU'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['ivoszbg/uniLoader', 'ivoszbg/linux', 'Mainline4Lumia/linux', 'ivoszbg/u-boot', 'ivoszbg-temporg/edk2-msm8916', 'ivoszbg/LAEMU'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
