@@ -96,7 +96,7 @@ const CONFIG = {
       degree: 'Student',
       from: '2017',
       to: '2026',
-
+    },
   ],
   publications: [
   ],
