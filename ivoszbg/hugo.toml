@@ -1,0 +1,43 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Ivaylo Ivanov'
+theme = 'PaperMod'
+
+
+[params]
+   ShowBreadCrumbs = true
+  [params.profileMode]
+    enabled = true
+    title = "<Title>" # optional, default will be site title
+#   subtitle = "This is subtitle"
+    imageUrl = "https://github.com/ivoszbg.png" # optional
+    imageTitle = "hey, my profile picture is supposed to be here :<" # optional
+    imageWidth = 120 # custom size
+    imageHeight = 120 # custom size
+
+  [[params.socialIcons]]
+    name = "Linkedin"
+    url = "https://www.linkedin.com/in/ivaylo-ivanov-ivanov1/"
+
+  [[params.socialIcons]]
+    name = "Github"
+    url = "https://github.com/ivoszbg"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:ivo.ivanov.ivanov1@gmail.com"
+
+[menus]
+  [[menus.main]]
+    identifier = 'posts'
+    name = 'Blog posts'
+    pageRef = '/blog/'
+    weight = 10
+  [[menus.main]]
+    name = 'My work'
+    pageRef = '/portfolio/'
+    weight = 20
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about/'
+    weight = 30

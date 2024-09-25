@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ivaylo Ivanov</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Ivaylo Ivanov</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Sep 2024 18:48:50 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/blog/</link>
+      <pubDate>Wed, 25 Sep 2024 18:48:50 +0300</pubDate>
+      <guid>http://localhost:1313/blog/</guid>
+      <description>&lt;p&gt;bruh&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio</title>
+      <link>http://localhost:1313/portfolio/</link>
+      <pubDate>Wed, 25 Sep 2024 18:47:52 +0300</pubDate>
+      <guid>http://localhost:1313/portfolio/</guid>
+      <description>&lt;hr&gt;
+&lt;h1 id=&#34;linux-contributions&#34;&gt;Linux Contributions&lt;/h1&gt;
+&lt;p&gt;List of brought up hardware that might or might not have been merged yet (or sit still in a close-to-mainline tree):&lt;/p&gt;
+&lt;h3 id=&#34;system-on-chips-socs&#34;&gt;System on Chips (SoCs)&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;SoC&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Component&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Status/Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;ATM7051&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Timer&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Main block works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Multicore&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;All cores work&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;I2C/UART&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works with fixed clocks&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;SIRQ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Secondary interrupt controller with support for up to 3 external interrupt lines (e.g., for MMC and PMIC)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;SPS&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Smart Power System for managing CPU-related power gates&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Pinctrl&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Partial support due to limited kernel source availability&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DMA&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Regulators&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Exynos 3475&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Multicore&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2 out of 4 cores enabled via SMP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ChipID&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;MCT (Multi-Core Timer)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Pinctrl&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Clock Controller&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Full support for all blocks&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;HSIC/I2C&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;eMMC&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;MIPI DSIM/CSIM PHY&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Decon&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Mali T710&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Enabled via Panfrost&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Exynos 8895&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Multicore&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Enabled via PSCI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ChipID&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;MCT &amp;amp; ARMv8 Generic Timer&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Both work fine; MCT no longer requires a fixed clock&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Pinctrl&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Clock Controller&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;CMU-{TOP, PERIS, PERIC0, PERIC1, FSYS0, FSYS1} supported&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;HSIC/I2C/SPI&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;MSM8212/MSM8610&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Multicore&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Enabled via SMP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;QGIC2&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Qualcomm Generic Interrupt Controller works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ARMv7 Generic Timer&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Pinctrl&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;I2C/UART&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;USB&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;phones&#34;&gt;Phones&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Phone&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Component&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Status/Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Samsung Galaxy S8&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Memory bits&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;SimpleDRM&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GPIO Keys&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Samsung Galaxy Xcover 3 VE&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Simple Panel &amp;amp; Mali T710&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Enabled via Panfrost&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Sensors&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Cyttsp5 Touchscreen&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Microsoft Lumia 540&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;SimpleDRM&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GPIO Keys&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Regulators&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Synaptics rmi4-f01 Touchscreen&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;handheld-consoles&#34;&gt;Handheld Consoles&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Console&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Component&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Status/Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Powkiddy X51&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Memory bits&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;SimpleDRM&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;All of this could be found either on my &lt;a href=&#34;https://github.com/ivoszbg&#34;&gt;github page&lt;/a&gt; or &lt;a href=&#34;https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&amp;amp;q=Ivaylo+Ivanov&#34;&gt;the linux mail lists&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Wed, 25 Sep 2024 18:36:36 +0300</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;I am Ivaylo Ivanov, a 17-year-old aspiring systems engineer from Bulgaria, specializing in Linux kernel and low-level development.&lt;/p&gt;
+&lt;p&gt;With &lt;strong&gt;six years&lt;/strong&gt; of programming experience, including &lt;strong&gt;four years&lt;/strong&gt; dedicated to low-level systems programming, I have a strong foundation in open-source technologies and embedded systems.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can contact me at &lt;a href=&#34;mailto:ivo.ivanov.ivanov1@gmail.com&#34;&gt;ivo.ivanov.ivanov1@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

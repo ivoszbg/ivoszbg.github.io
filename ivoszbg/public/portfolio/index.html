@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Portfolio | Ivaylo Ivanov</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+Linux Contributions
+List of brought up hardware that might or might not have been merged yet (or sit still in a close-to-mainline tree):
+System on Chips (SoCs)
+
+  
+      
+          SoC
+          Component
+          Status/Description
+      
+  
+  
+      
+          ATM7051
+          Timer
+          Main block works
+      
+      
+          
+          Multicore
+          All cores work
+      
+      
+          
+          I2C/UART
+          Works with fixed clocks
+      
+      
+          
+          SIRQ
+          Secondary interrupt controller with support for up to 3 external interrupt lines (e.g., for MMC and PMIC)
+      
+      
+          
+          SPS
+          Smart Power System for managing CPU-related power gates
+      
+      
+          
+          Pinctrl
+          Partial support due to limited kernel source availability
+      
+      
+          
+          DMA
+          Works
+      
+      
+          
+          Regulators
+          Works
+      
+      
+          Exynos 3475
+          Multicore
+          2 out of 4 cores enabled via SMP
+      
+      
+          
+          ChipID
+          Works
+      
+      
+          
+          MCT (Multi-Core Timer)
+          Works
+      
+      
+          
+          Pinctrl
+          Works
+      
+      
+          
+          Clock Controller
+          Full support for all blocks
+      
+      
+          
+          HSIC/I2C
+          Works
+      
+      
+          
+          eMMC
+          Works
+      
+      
+          
+          MIPI DSIM/CSIM PHY
+          Works
+      
+      
+          
+          Decon
+          Works
+      
+      
+          
+          Mali T710
+          Enabled via Panfrost
+      
+      
+          Exynos 8895
+          Multicore
+          Enabled via PSCI
+      
+      
+          
+          ChipID
+          Works
+      
+      
+          
+          MCT &amp; ARMv8 Generic Timer
+          Both work fine; MCT no longer requires a fixed clock
+      
+      
+          
+          Pinctrl
+          Works
+      
+      
+          
+          Clock Controller
+          CMU-{TOP, PERIS, PERIC0, PERIC1, FSYS0, FSYS1} supported
+      
+      
+          
+          HSIC/I2C/SPI
+          Works
+      
+      
+          MSM8212/MSM8610
+          Multicore
+          Enabled via SMP
+      
+      
+          
+          QGIC2
+          Qualcomm Generic Interrupt Controller works
+      
+      
+          
+          ARMv7 Generic Timer
+          Works
+      
+      
+          
+          Pinctrl
+          Works
+      
+      
+          
+          I2C/UART
+          Works
+      
+      
+          
+          USB
+          Works
+      
+  
+
+Phones
+
+  
+      
+          Phone
+          Component
+          Status/Description
+      
+  
+  
+      
+          Samsung Galaxy S8
+          Memory bits
+          Works
+      
+      
+          
+          SimpleDRM
+          Works
+      
+      
+          
+          GPIO Keys
+          Works
+      
+      
+          Samsung Galaxy Xcover 3 VE
+          Simple Panel &amp; Mali T710
+          Enabled via Panfrost
+      
+      
+          
+          Sensors
+          Works
+      
+      
+          
+          Cyttsp5 Touchscreen
+          Works
+      
+      
+          Microsoft Lumia 540
+          SimpleDRM
+          Works
+      
+      
+          
+          GPIO Keys
+          Works
+      
+      
+          
+          Regulators
+          Works
+      
+      
+          
+          Synaptics rmi4-f01 Touchscreen
+          Works
+      
+  
+
+Handheld Consoles
+
+  
+      
+          Console
+          Component
+          Status/Description
+      
+  
+  
+      
+          Powkiddy X51
+          Memory bits
+          Works
+      
+      
+          
+          SimpleDRM
+          Works
+      
+  
+
+All of this could be found either on my github page or the linux mail lists">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/portfolio/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/portfolio/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Ivaylo Ivanov (Alt + H)">Ivaylo Ivanov</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/blog/" title="Blog posts">
+                    <span>Blog posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/portfolio/" title="My work">
+                    <span class="active">My work</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Portfolio
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2024-09-25 18:47:52 +0300 EEST'>September 25, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><hr>
+<h1 id="linux-contributions">Linux Contributions<a hidden class="anchor" aria-hidden="true" href="#linux-contributions">#</a></h1>
+<p>List of brought up hardware that might or might not have been merged yet (or sit still in a close-to-mainline tree):</p>
+<h3 id="system-on-chips-socs">System on Chips (SoCs)<a hidden class="anchor" aria-hidden="true" href="#system-on-chips-socs">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">SoC</th>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Status/Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>ATM7051</strong></td>
+          <td style="text-align: left">Timer</td>
+          <td style="text-align: left">Main block works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Multicore</td>
+          <td style="text-align: left">All cores work</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">I2C/UART</td>
+          <td style="text-align: left">Works with fixed clocks</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">SIRQ</td>
+          <td style="text-align: left">Secondary interrupt controller with support for up to 3 external interrupt lines (e.g., for MMC and PMIC)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">SPS</td>
+          <td style="text-align: left">Smart Power System for managing CPU-related power gates</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Pinctrl</td>
+          <td style="text-align: left">Partial support due to limited kernel source availability</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">DMA</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Regulators</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Exynos 3475</strong></td>
+          <td style="text-align: left">Multicore</td>
+          <td style="text-align: left">2 out of 4 cores enabled via SMP</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">ChipID</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">MCT (Multi-Core Timer)</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Pinctrl</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Clock Controller</td>
+          <td style="text-align: left">Full support for all blocks</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">HSIC/I2C</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">eMMC</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">MIPI DSIM/CSIM PHY</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Decon</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Mali T710</td>
+          <td style="text-align: left">Enabled via Panfrost</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Exynos 8895</strong></td>
+          <td style="text-align: left">Multicore</td>
+          <td style="text-align: left">Enabled via PSCI</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">ChipID</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">MCT &amp; ARMv8 Generic Timer</td>
+          <td style="text-align: left">Both work fine; MCT no longer requires a fixed clock</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Pinctrl</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Clock Controller</td>
+          <td style="text-align: left">CMU-{TOP, PERIS, PERIC0, PERIC1, FSYS0, FSYS1} supported</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">HSIC/I2C/SPI</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>MSM8212/MSM8610</strong></td>
+          <td style="text-align: left">Multicore</td>
+          <td style="text-align: left">Enabled via SMP</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">QGIC2</td>
+          <td style="text-align: left">Qualcomm Generic Interrupt Controller works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">ARMv7 Generic Timer</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Pinctrl</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">I2C/UART</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">USB</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="phones">Phones<a hidden class="anchor" aria-hidden="true" href="#phones">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Phone</th>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Status/Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Samsung Galaxy S8</strong></td>
+          <td style="text-align: left">Memory bits</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">SimpleDRM</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">GPIO Keys</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Samsung Galaxy Xcover 3 VE</strong></td>
+          <td style="text-align: left">Simple Panel &amp; Mali T710</td>
+          <td style="text-align: left">Enabled via Panfrost</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Sensors</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Cyttsp5 Touchscreen</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Microsoft Lumia 540</strong></td>
+          <td style="text-align: left">SimpleDRM</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">GPIO Keys</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Regulators</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">Synaptics rmi4-f01 Touchscreen</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="handheld-consoles">Handheld Consoles<a hidden class="anchor" aria-hidden="true" href="#handheld-consoles">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Console</th>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Status/Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Powkiddy X51</strong></td>
+          <td style="text-align: left">Memory bits</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">SimpleDRM</td>
+          <td style="text-align: left">Works</td>
+      </tr>
+  </tbody>
+</table>
+<p>All of this could be found either on my <a href="https://github.com/ivoszbg">github page</a> or <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&amp;q=Ivaylo+Ivanov">the linux mail lists</a></p>
+<hr>
+<h1 id="uniloader">uniLoader<a hidden class="anchor" aria-hidden="true" href="#uniloader">#</a></h1>
+<p>uniLoader is a secondary bootloader that I&rsquo;ve been working on in the meanwhile. It is capable of loading the upstream Linux kernel for Android and iOS-based devices.</p>
+<p>The purpose behind it is to provide a small shim for avoiding vendors&rsquo; bootloader quirks. For example:</p>
+<ul>
+<li>Exynos devices past 2016 leave decon&rsquo;s framebuffer refreshing disabled right before jumping to kernel, which makes initial debugging efforts when bringing up the platform to upstream linux hard</li>
+<li>Some S-Boot releases have CNTFRQ_EL0 left unset, which causes issues since the linux timer driver cannot read its value and it SErrors. It either has to be set as a hardcoded frequency property in the DT, or passed via libfdt from uniLoader (the latter is cleaner, but still has to be implemented)</li>
+</ul>
+<p>The currently supported architectures are ARMV7 and AARCH64. A lot of Samsung devices, as well as a few Apple and Qualcomm ones are supported.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Ivaylo Ivanov</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
