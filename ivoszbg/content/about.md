@@ -1,7 +1,6 @@
 +++
 title = 'About'
 date = 2024-09-25T18:36:36+03:00
-draft = true
 +++
 
 > I am Ivaylo Ivanov, a 17-year-old aspiring systems engineer from Bulgaria, specializing in Linux kernel and low-level development.

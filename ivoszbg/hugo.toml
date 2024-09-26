@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Ivaylo Ivanov'
 theme = 'PaperMod'
 
-
 [params]
    ShowBreadCrumbs = true
   [params.profileMode]

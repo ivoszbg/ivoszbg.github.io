@@ -1,7 +1,6 @@
 +++
 title = 'Portfolio'
 date = 2024-09-25T18:47:52+03:00
-draft = true
 +++
 
 ---
