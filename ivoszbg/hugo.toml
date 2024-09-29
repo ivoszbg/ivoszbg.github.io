@@ -3,6 +3,14 @@ languageCode = 'en-us'
 title = 'Ivaylo Ivanov'
 theme = 'PaperMod'
 
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[[module.mounts]]
+source = 'images'
+target = 'static/images'
+
 [params]
    ShowBreadCrumbs = true
   [params.profileMode]

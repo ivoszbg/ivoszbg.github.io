@@ -5,11 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Portfolio | Ivaylo Ivanov</title>
+<title>My work | Ivaylo Ivanov</title>
 <meta name="keywords" content="">
 <meta name="description" content="
 Linux Contributions
-List of brought up hardware that might or might not have been merged yet (or sit still in a close-to-mainline tree):
+List of hardware that I&rsquo;ve brought up from the zero.
+It might or might not have been merged yet (or is still sitting in my torvalds/linux fork):
 System on Chips (SoCs)
 
   
@@ -60,206 +61,12 @@ System on Chips (SoCs)
           Regulators
           Works
       
-      
-          Exynos 3475
-          Multicore
-          2 out of 4 cores enabled via SMP
-      
-      
-          
-          ChipID
-          Works
-      
-      
-          
-          MCT (Multi-Core Timer)
-          Works
-      
-      
-          
-          Pinctrl
-          Works
-      
-      
-          
-          Clock Controller
-          Full support for all blocks
-      
-      
-          
-          HSIC/I2C
-          Works
-      
-      
-          
-          eMMC
-          Works
-      
-      
-          
-          MIPI DSIM/CSIM PHY
-          Works
-      
-      
-          
-          Decon
-          Works
-      
-      
-          
-          Mali T710
-          Enabled via Panfrost
-      
-      
-          Exynos 8895
-          Multicore
-          Enabled via PSCI
-      
-      
-          
-          ChipID
-          Works
-      
-      
-          
-          MCT &amp; ARMv8 Generic Timer
-          Both work fine; MCT no longer requires a fixed clock
-      
-      
-          
-          Pinctrl
-          Works
-      
-      
-          
-          Clock Controller
-          CMU-{TOP, PERIS, PERIC0, PERIC1, FSYS0, FSYS1} supported
-      
-      
-          
-          HSIC/I2C/SPI
-          Works
-      
-      
-          MSM8212/MSM8610
-          Multicore
-          Enabled via SMP
-      
-      
-          
-          QGIC2
-          Qualcomm Generic Interrupt Controller works
-      
-      
-          
-          ARMv7 Generic Timer
-          Works
-      
-      
-          
-          Pinctrl
-          Works
-      
-      
-          
-          I2C/UART
-          Works
-      
-      
-          
-          USB
-          Works
-      
   
 
-Phones
-
-  
-      
-          Phone
-          Component
-          Status/Description
-      
-  
-  
-      
-          Samsung Galaxy S8
-          Memory bits
-          Works
-      
-      
-          
-          SimpleDRM
-          Works
-      
-      
-          
-          GPIO Keys
-          Works
-      
-      
-          Samsung Galaxy Xcover 3 VE
-          Simple Panel &amp; Mali T710
-          Enabled via Panfrost
-      
-      
-          
-          Sensors
-          Works
-      
-      
-          
-          Cyttsp5 Touchscreen
-          Works
-      
-      
-          Microsoft Lumia 540
-          SimpleDRM
-          Works
-      
-      
-          
-          GPIO Keys
-          Works
-      
-      
-          
-          Regulators
-          Works
-      
-      
-          
-          Synaptics rmi4-f01 Touchscreen
-          Works
-      
-  
-
-Handheld Consoles
-
-  
-      
-          Console
-          Component
-          Status/Description
-      
-  
-  
-      
-          Powkiddy X51
-          Memory bits
-          Works
-      
-      
-          
-          SimpleDRM
-          Works
-      
-  
-
-All of this could be found either on my github page or the linux mail lists">
+This was actually relatively hard to bring up. There are no absolutely no sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored my emails, so I had to reverse-engineer a lot of things. Thankfully I managed to also find ancient sources for a somewhat similar platform, from where I borrowed information about registers.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/portfolio/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a4af005db3c63bc24ffc0dcec80afc2302cd35a372f77b50d97cd95a0ffee9d4.css" integrity="sha256-pK8AXbPGO8JP/A3OyAr8IwLNNaNy93tQ2XzZWg/&#43;6dQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -371,13 +178,7 @@ All of this could be found either on my github page or the linux mail lists">
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
     <h1 class="post-title entry-hint-parent">
-      Portfolio
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
+      My work
     </h1>
     <div class="post-meta"><span title='2024-09-25 18:47:52 +0300 EEST'>September 25, 2024</span>
 
@@ -385,7 +186,8 @@ All of this could be found either on my github page or the linux mail lists">
   </header> 
   <div class="post-content"><hr>
 <h1 id="linux-contributions">Linux Contributions<a hidden class="anchor" aria-hidden="true" href="#linux-contributions">#</a></h1>
-<p>List of brought up hardware that might or might not have been merged yet (or sit still in a close-to-mainline tree):</p>
+<p>List of hardware that I&rsquo;ve brought up from the zero.
+It might or might not have been merged yet (or is still sitting in my torvalds/linux fork):</p>
 <h3 id="system-on-chips-socs">System on Chips (SoCs)<a hidden class="anchor" aria-hidden="true" href="#system-on-chips-socs">#</a></h3>
 <table>
   <thead>
@@ -436,8 +238,31 @@ All of this could be found either on my github page or the linux mail lists">
           <td style="text-align: left">Regulators</td>
           <td style="text-align: left">Works</td>
       </tr>
+  </tbody>
+</table>
+<p>This was actually relatively hard to bring up. There are no absolutely no sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored my emails, so I had to reverse-engineer a lot of things. Thankfully I managed to also find ancient sources for a somewhat similar platform, from where I borrowed information about registers.</p>
+<p>There are still some essential things that have to be brought up. For example:</p>
+<ul>
+<li>due to the lack of information I only managed to write a partial pinctrl driver. It doesn&rsquo;t include any pin groups nor funcs, only gpio.</li>
+<li>the sd card mmc might be a bit difficult to bring up. Device trees suggest that ATM7051 isn&rsquo;t using DMA for that, which is a bit&hellip; weird. The upstream driver only has DMA support.</li>
+<li>there&rsquo;s absolutely no nand drivers for Actions SoCs. Anywhere. And I&rsquo;m not gonna put in the effort to reverse engineer it for such a weak platform.</li>
+<li>the GPU driver isn&rsquo;t open sourced. We can use proprietary blobs with hacks, but that&rsquo;ll never land in mainline.</li>
+<li>the keys aren&rsquo;t wired through GPIO, but the pmic. Aaaaaand that&rsquo;s bad since we only have regulators functionality for the pmic upstream.</li>
+</ul>
+<p>I wrote a small <a href="https://www.reddit.com/r/SBCGaming/comments/1f1o4n2/bringing_mainline_linux_to_life_on_atm7051/">reddit post to bring awareness about this.</a></p>
+<p><img loading="lazy" src="/images/bringing-mainline-linux-to-life-on-atm7051-handhelds-v0-rp5vjhpag0ld1.webp" alt="alt"  />
+</p>
+<table>
+  <thead>
       <tr>
-          <td style="text-align: left"><strong>Exynos 3475</strong></td>
+          <th style="text-align: left">SoC</th>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Status/Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Exynos3475</strong></td>
           <td style="text-align: left">Multicore</td>
           <td style="text-align: left">2 out of 4 cores enabled via SMP</td>
       </tr>
@@ -486,8 +311,35 @@ All of this could be found either on my github page or the linux mail lists">
           <td style="text-align: left">Mali T710</td>
           <td style="text-align: left">Enabled via Panfrost</td>
       </tr>
+  </tbody>
+</table>
+<p>This has been my biggest project so far. It&rsquo;s reached a somewhat mature point, where devices are usable for media consumption (without audio though :P), with important hardware like Decon, GPU, touchscreen and WIFI/BT working. Nevertheless it still has some issues that need resolving, like:</p>
+<ul>
+<li>the SMP isn&rsquo;t fully working and wayland DEs like phosh are being a bit unstable.</li>
+<li>USB is a bit quirky, I&rsquo;ve gotten the PHY to work but dwc doesn&rsquo;t work.</li>
+</ul>
+<p>I will also start upstreaming it once most of my exynos8895 patches get merged. Here&rsquo;s some pictures <a href="https://i.imgur.com/fyVvY6o.mp4">and a short video showcasing hardware accelerated phosh.</a></p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/xcover3ve_2.jpg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        <img loading="lazy" src="/images/xcover3ve_1.jpg" alt="alt"  />
+    </div>
+</div>
+
+
+<table>
+  <thead>
       <tr>
-          <td style="text-align: left"><strong>Exynos 8895</strong></td>
+          <th style="text-align: left">SoC</th>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Status/Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Exynos8895</strong></td>
           <td style="text-align: left">Multicore</td>
           <td style="text-align: left">Enabled via PSCI</td>
       </tr>
@@ -499,7 +351,7 @@ All of this could be found either on my github page or the linux mail lists">
       <tr>
           <td style="text-align: left"></td>
           <td style="text-align: left">MCT &amp; ARMv8 Generic Timer</td>
-          <td style="text-align: left">Both work fine; MCT no longer requires a fixed clock</td>
+          <td style="text-align: left">Both work fine</td>
       </tr>
       <tr>
           <td style="text-align: left"></td>
@@ -516,8 +368,36 @@ All of this could be found either on my github page or the linux mail lists">
           <td style="text-align: left">HSIC/I2C/SPI</td>
           <td style="text-align: left">Works</td>
       </tr>
+  </tbody>
+</table>
+<p>Exynos8895 is definitely not an easy platform to work on. As one of the high-end modern exynos SoCs (even for 2017), it has complex peripherals and a large amount of buses like I2Cs, UARTs, HSI2Cs. Here&rsquo;s a small list of things I&rsquo;m planning to do in the future:</p>
+<ul>
+<li>a driver for the new SPEEDY bus, which is used for PMIC</li>
+<li>8895 features usbdrd3.0 that needs somewhat complex PHY tuning.</li>
+<li>the UFS phy, which also has been causing me some trouble.</li>
+<li>Mali G71 via Panfrost</li>
+</ul>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/s8_1.jpg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        
+    </div>
+</div>
+
+
+<table>
+  <thead>
       <tr>
-          <td style="text-align: left"><strong>MSM8212/MSM8610</strong></td>
+          <th style="text-align: left">SoC</th>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Status/Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>MSM8x12/MSM8x10</strong></td>
           <td style="text-align: left">Multicore</td>
           <td style="text-align: left">Enabled via SMP</td>
       </tr>
@@ -548,6 +428,18 @@ All of this could be found either on my github page or the linux mail lists">
       </tr>
   </tbody>
 </table>
+<p>This SoC is a cut-off version of the MSM8974. MSM8212 features 4 cores and MSM8610 has 2. The biggest issue currently is that mainline does not have support for MDP3, which means that I&rsquo;ll have to write a driver for it if we want a working panel driver. Meanwhile the Adreno GPU should be doable with a small amount of changes, simpleDRM and a small hack that allows MESA to use simpleDRM.</p>
+<p>All progress for {MSM8x10, MSM8x12} has been achieved under the <a href="https://github.com/Mainline4Lumia">Mainline4Lumia project</a>.</p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/535_1.jpeg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        <img loading="lazy" src="/images/435_1.jpg" alt="alt"  />
+    </div>
+</div>
+
+
 <h3 id="phones">Phones<a hidden class="anchor" aria-hidden="true" href="#phones">#</a></h3>
 <table>
   <thead>
@@ -635,13 +527,43 @@ All of this could be found either on my github page or the linux mail lists">
 <p>All of this could be found either on my <a href="https://github.com/ivoszbg">github page</a> or <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&amp;q=Ivaylo+Ivanov">the linux mail lists</a></p>
 <hr>
 <h1 id="uniloader">uniLoader<a hidden class="anchor" aria-hidden="true" href="#uniloader">#</a></h1>
-<p>uniLoader is a secondary bootloader that I&rsquo;ve been working on in the meanwhile. It is capable of loading the upstream Linux kernel for Android and iOS-based devices.</p>
+<p><a href="https://github.com/ivoszbg/uniLoader">uniLoader</a> is a secondary bootloader that is capable of loading the upstream Linux kernel for Android and iOS-based devices.</p>
 <p>The purpose behind it is to provide a small shim for avoiding vendors&rsquo; bootloader quirks. For example:</p>
 <ul>
 <li>Exynos devices past 2016 leave decon&rsquo;s framebuffer refreshing disabled right before jumping to kernel, which makes initial debugging efforts when bringing up the platform to upstream linux hard</li>
 <li>Some S-Boot releases have CNTFRQ_EL0 left unset, which causes issues since the linux timer driver cannot read its value and it SErrors. It either has to be set as a hardcoded frequency property in the DT, or passed via libfdt from uniLoader (the latter is cleaner, but still has to be implemented)</li>
 </ul>
 <p>The currently supported architectures are ARMV7 and AARCH64. A lot of Samsung devices, as well as a few Apple and Qualcomm ones are supported.</p>
+<h1 id="u-boot-contributions">U-Boot Contributions<a hidden class="anchor" aria-hidden="true" href="#u-boot-contributions">#</a></h1>
+<p>I&rsquo;ve gotten u-boot working on few devices in order to avoid the stock BL&rsquo;s limitations, like:</p>
+<h2 id="iphone-5">iPhone 5<a hidden class="anchor" aria-hidden="true" href="#iphone-5">#</a></h2>
+<p>This has been the most fun to bring up out of all devices. First of all, S5L8950x either entirely doesn&rsquo;t have VBAR, or Apple&rsquo;s implementation of it is broken, so I had to disable it. Then there were a ton of small issues here and there, which I fixed thankfully due to an emulator that I specifically wrote for s5l8950x, called &ldquo;Legacy Apple Emulator&rdquo;. Then I had another memory issue, where parsing the framebuffer address via DT was broken, so I had to fix that as well. And finally I brought up USB! - well, partially, since it probably needs some PHY and DWC2 config work. Only USB plug-in detection works for now.
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/iphone5_u-boot.jpg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        <img loading="lazy" src="/images/LAEMU.jpg" alt="alt"  />
+    </div>
+</div>
+
+</p>
+<h2 id="xcover-3-value-edition--powkiddy-x51">Xcover 3 Value Edition &amp;&amp; Powkiddy X51<a hidden class="anchor" aria-hidden="true" href="#xcover-3-value-edition--powkiddy-x51">#</a></h2>
+<p><div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/xcover3ve_u-boot.jpg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        <img loading="lazy" src="/images/atm7051_u-boot.png" alt="alt"  />
+    </div>
+</div>
+
+
+
+
+
+<img src="" style="width:50%; height:50%;" alt="">
+</p>
 
 
   </div>
