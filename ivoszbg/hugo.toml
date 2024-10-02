@@ -14,6 +14,13 @@ target = 'static/images'
 [params]
    ShowBreadCrumbs = true
    defaultTheme = "light"
+  # Add Homepage Specific Parameters
+  [params.home]
+    showRecentPosts = true
+    recentPostsCount = 5 # Adjust the number as needed
+    showPortfolio = true
+    showAbout = true
+
   [params.profileMode]
     enabled = true
     title = "Ivaylo Ivanov" # optional, default will be site title
@@ -22,6 +29,10 @@ target = 'static/images'
     imageTitle = "hey, my profile picture is supposed to be here :<" # optional
     imageWidth = 110 # custom size
     imageHeight = 110 # custom size
+
+  [[params.profileMode.buttons]]
+    name = "My work"
+    url = "/portfolio"
 
   [[params.socialIcons]]
     name = "Linkedin"
