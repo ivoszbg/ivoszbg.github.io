@@ -1,6 +1,7 @@
 +++
 title = 'My work'
 date = 2024-09-25T18:47:52+03:00
+ShowToc = "true"
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blogs on My New Hugo Site</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blogs on My New Hugo Site</description>
-    <generator>Hugo -- 0.134.3</generator>
+    <title>Blogs on Ivaylo Ivanov</title>
+    <link>http://localhost:42415/blog/</link>
+    <description>Recent content in Blogs on Ivaylo Ivanov</description>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Sep 2024 18:47:28 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Oct 2024 18:48:50 +0300</lastBuildDate>
+    <atom:link href="http://localhost:42415/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog</title>
-      <link>http://localhost:1313/blog/blog/</link>
-      <pubDate>Wed, 25 Sep 2024 18:47:28 +0300</pubDate>
-      <guid>http://localhost:1313/blog/blog/</guid>
-      <description></description>
+      <title>Bringing Mainline Linux to life on ATM7051 handhelds</title>
+      <link>http://localhost:42415/blog/powkiddy-x51/</link>
+      <pubDate>Wed, 02 Oct 2024 18:48:50 +0300</pubDate>
+      <guid>http://localhost:42415/blog/powkiddy-x51/</guid>
+      <description>&lt;h2 id=&#34;mainline-linux-on-the-powkiddy-x51&#34;&gt;Mainline Linux on the Powkiddy X51&lt;/h2&gt;
+&lt;p&gt;For those who don&amp;rsquo;t know, the Mainline Linux kernel (upstream) is the newest released and under-development version of the Linux kernel. Quite literally: &lt;a href=&#34;https://github.com/torvalds/linux&#34;&gt;github.com/torvalds/linux&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;ve been working on SoC and device bringup as a Linux kernel hobbyist for a while now (~4 years). One or two years ago, I got my hands on a handheld called Powkiddy X51, because why not :D.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

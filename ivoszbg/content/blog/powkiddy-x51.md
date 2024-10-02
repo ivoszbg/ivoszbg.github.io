@@ -1,6 +1,7 @@
 +++
 title = 'Bringing Mainline Linux to life on ATM7051 handhelds'
 date = 2024-10-02T18:48:50+03:00
+ShowToc = "true"
 +++
 ## Mainline Linux on the Powkiddy X51
 
@@ -24,7 +25,7 @@ Recently (1 or 2 months ago), I decided to revisit the project since a friend of
 
 After disassembling the device, soldering a serial-to-USB adapter to the UART5 RX and TX, and finally firing up PuTTY, we got **U-Boot logs!**
 
-![U-Boot logs](/images/stockubootlogs-x51.png)
+![U-Boot logs](/images/stockubootlogs-x51.png#center)
 
 And then it was time to do the hard work: getting mainline Linux to boot. The boot flow of the device is as follows:
 
@@ -35,7 +36,7 @@ In order to boot my own build of the Linux kernel, we need to replace the downst
 ### Finally seeing the penguins
 
 Of course, not everything was smooth as butter:
-![alt](/images/notsosmooth-x51.png)
+![alt](/images/notsosmooth-x51.png#center)
 
 It took quite a bit of work, but I managed to get the following peripherals working:
 
@@ -52,7 +53,7 @@ It took quite a bit of work, but I managed to get the following peripherals work
 
 And **BOOM!** Arch Linux INITRAMFS with 4 fancy penguins on my handheld:
 
-![alt](/images/bringing-mainline-linux-to-life-on-atm7051-handhelds-v0-rp5vjhpag0ld1.webp)
+![alt](/images/bringing-mainline-linux-to-life-on-atm7051-handhelds-v0-rp5vjhpag0ld1.webp#center)
 
 ### Remaining issues
 
@@ -68,7 +69,7 @@ I also [tried compiling and booting the 3.4 kernel](https://imgur.com/BPyupV1), 
 
 This device doesn't seem to have bootloader signing, hence why I've also started working on upstream U-Boot. Currently it's booting with working UART, which is capable of booting Linux via Kermit:
 
-![alt](/images/atm7051_u-boot.png)
+![alt](/images/atm7051_u-boot.png#center)
 
 This will be useful if we ever get to fully replacing the outdated stock U-Boot.
 
