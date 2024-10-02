@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:34577/blog/</loc>
+    <loc>http://localhost:46257/blog/powkiddy-x51/</loc>
+    <lastmod>2024-10-02T18:48:50+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46257/</loc>
+    <lastmod>2024-10-02T18:48:50+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46257/blog/</loc>
     <lastmod>2024-09-25T18:48:50+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:34577/blog/powkiddy-x51/</loc>
-    <lastmod>2024-09-25T18:48:50+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:34577/</loc>
-    <lastmod>2024-09-25T18:48:50+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:34577/portfolio/</loc>
+    <loc>http://localhost:46257/portfolio/</loc>
     <lastmod>2024-09-25T18:47:52+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:34577/about/</loc>
+    <loc>http://localhost:46257/about/</loc>
     <lastmod>2024-09-25T18:36:36+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:34577/categories/</loc>
+    <loc>http://localhost:46257/categories/</loc>
   </url><url>
-    <loc>http://localhost:34577/tags/</loc>
+    <loc>http://localhost:46257/tags/</loc>
   </url>
 </urlset>
