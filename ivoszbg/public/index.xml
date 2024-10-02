@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ivaylo Ivanov</title>
-    <link>http://localhost:37351/</link>
+    <link>http://localhost:44489/</link>
     <description>Recent content on Ivaylo Ivanov</description>
     <generator>Hugo -- 0.135.0</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Oct 2024 18:48:50 +0300</lastBuildDate>
-    <atom:link href="http://localhost:37351/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:44489/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bringing Mainline Linux to life on ATM7051 handhelds</title>
-      <link>http://localhost:37351/blog/powkiddy-x51/</link>
+      <link>http://localhost:44489/blog/powkiddy-x51/</link>
       <pubDate>Wed, 02 Oct 2024 18:48:50 +0300</pubDate>
-      <guid>http://localhost:37351/blog/powkiddy-x51/</guid>
+      <guid>http://localhost:44489/blog/powkiddy-x51/</guid>
       <description>&lt;h2 id=&#34;mainline-linux-on-the-powkiddy-x51&#34;&gt;Mainline Linux on the Powkiddy X51&lt;/h2&gt;
 &lt;p&gt;For those who don&amp;rsquo;t know, the Mainline Linux kernel (upstream) is the newest released and under-development version of the Linux kernel. Quite literally: &lt;a href=&#34;https://github.com/torvalds/linux&#34;&gt;github.com/torvalds/linux&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h3&gt;
@@ -20,16 +20,16 @@
     </item>
     <item>
       <title>Blog</title>
-      <link>http://localhost:37351/blog/</link>
+      <link>http://localhost:44489/blog/</link>
       <pubDate>Wed, 25 Sep 2024 18:48:50 +0300</pubDate>
-      <guid>http://localhost:37351/blog/</guid>
+      <guid>http://localhost:44489/blog/</guid>
       <description>&lt;p&gt;Empty (for now :D)&lt;/p&gt;</description>
     </item>
     <item>
       <title>My work</title>
-      <link>http://localhost:37351/portfolio/</link>
+      <link>http://localhost:44489/portfolio/</link>
       <pubDate>Wed, 25 Sep 2024 18:47:52 +0300</pubDate>
-      <guid>http://localhost:37351/portfolio/</guid>
+      <guid>http://localhost:44489/portfolio/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;linux-contributions&#34;&gt;Linux Contributions&lt;/h1&gt;
 &lt;p&gt;List of ARM/ARM64 hardware that I&amp;rsquo;ve brought up from the zero.
@@ -90,9 +90,9 @@ It might or might not have been merged yet (or is still sitting in my torvalds/l
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:37351/about/</link>
+      <link>http://localhost:44489/about/</link>
       <pubDate>Wed, 25 Sep 2024 18:36:36 +0300</pubDate>
-      <guid>http://localhost:37351/about/</guid>
+      <guid>http://localhost:44489/about/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;I am Ivaylo Ivanov, a 17-year-old aspiring embedded enthusiast from Bulgaria, specializing in Linux kernel and low-level development. I&amp;rsquo;m currently studying in the 11th grade at PPMG &amp;ldquo;Geo Milev&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;With &lt;strong&gt;six years&lt;/strong&gt; of programming experience, including &lt;strong&gt;four years&lt;/strong&gt; dedicated to low-level systems programming, I have a strong foundation in open-source technologies and embedded systems.&lt;/p&gt;
