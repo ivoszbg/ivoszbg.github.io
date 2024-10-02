@@ -22,7 +22,7 @@
       <guid>http://localhost:1313/portfolio/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;linux-contributions&#34;&gt;Linux Contributions&lt;/h1&gt;
-&lt;p&gt;List of hardware that I&amp;rsquo;ve brought up from the zero.
+&lt;p&gt;List of ARM/ARM64 hardware that I&amp;rsquo;ve brought up from the zero.
 It might or might not have been merged yet (or is still sitting in my torvalds/linux fork):&lt;/p&gt;
 &lt;h3 id=&#34;system-on-chips-socs&#34;&gt;System on Chips (SoCs)&lt;/h3&gt;
 &lt;table&gt;
@@ -76,7 +76,7 @@ It might or might not have been merged yet (or is still sitting in my torvalds/l
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;This was actually relatively hard to bring up. There are no absolutely no sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored my emails, so I had to reverse-engineer a lot of things. Thankfully I managed to also find ancient sources for a somewhat similar platform, from where I borrowed information about registers.&lt;/p&gt;</description>
+&lt;p&gt;This was relatively hard to bring up, because there are no absolutely no sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored my emails, so I had to reverse-engineer a lot of things. Thankfully I managed to also find ancient sources for a somewhat similar platform, from where I borrowed information about registers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
@@ -84,7 +84,7 @@ It might or might not have been merged yet (or is still sitting in my torvalds/l
       <pubDate>Wed, 25 Sep 2024 18:36:36 +0300</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;I am Ivaylo Ivanov, a 17-year-old aspiring embedded enthusiast from Bulgaria, specializing in Linux kernel and low-level development.&lt;/p&gt;
+&lt;p&gt;I am Ivaylo Ivanov, a 17-year-old aspiring embedded enthusiast from Bulgaria, specializing in Linux kernel and low-level development. I&amp;rsquo;m currently studying in the 11th grade at PPMG &amp;ldquo;Geo Milev&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;With &lt;strong&gt;six years&lt;/strong&gt; of programming experience, including &lt;strong&gt;four years&lt;/strong&gt; dedicated to low-level systems programming, I have a strong foundation in open-source technologies and embedded systems.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;You can contact me at &lt;a href=&#34;mailto:ivo.ivanov.ivanov1@gmail.com&#34;&gt;ivo.ivanov.ivanov1@gmail.com&lt;/a&gt;&lt;/p&gt;</description>

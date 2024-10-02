@@ -17,10 +17,10 @@ target = 'static/images'
     enabled = true
     title = "<Title>" # optional, default will be site title
 #   subtitle = "This is subtitle"
-    imageUrl = "https://github.com/ivoszbg.png" # optional
+    imageUrl = "/images/pfp1.jpg" # optional
     imageTitle = "hey, my profile picture is supposed to be here :<" # optional
-    imageWidth = 120 # custom size
-    imageHeight = 120 # custom size
+    imageWidth = 110 # custom size
+    imageHeight = 110 # custom size
 
   [[params.socialIcons]]
     name = "Linkedin"
