@@ -2,6 +2,7 @@
 title = 'Bringing Mainline Linux to life on ATM7051 handhelds'
 date = 2024-10-02T18:48:50+03:00
 ShowToc = "true"
+type = "post"
 +++
 ## Mainline Linux on the Powkiddy X51
 

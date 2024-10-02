@@ -59,7 +59,7 @@
 <section class="recent-posts">
   <h2>Recent blog posts</h2>
   <ul>
-    {{ range first 3 ( where .Site.Pages "Type" "blog" ).ByDate }}
+	{{ range first 3 (where .Site.Pages "Type" "post") }}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </li>

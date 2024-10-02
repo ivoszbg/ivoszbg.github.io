@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on Ivaylo Ivanov</title>
-    <link>http://localhost:42415/blog/</link>
+    <link>http://localhost:46667/blog/</link>
     <description>Recent content in Blogs on Ivaylo Ivanov</description>
     <generator>Hugo -- 0.135.0</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Oct 2024 18:48:50 +0300</lastBuildDate>
-    <atom:link href="http://localhost:42415/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:46667/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bringing Mainline Linux to life on ATM7051 handhelds</title>
-      <link>http://localhost:42415/blog/powkiddy-x51/</link>
+      <link>http://localhost:46667/blog/powkiddy-x51/</link>
       <pubDate>Wed, 02 Oct 2024 18:48:50 +0300</pubDate>
-      <guid>http://localhost:42415/blog/powkiddy-x51/</guid>
+      <guid>http://localhost:46667/blog/powkiddy-x51/</guid>
       <description>&lt;h2 id=&#34;mainline-linux-on-the-powkiddy-x51&#34;&gt;Mainline Linux on the Powkiddy X51&lt;/h2&gt;
 &lt;p&gt;For those who don&amp;rsquo;t know, the Mainline Linux kernel (upstream) is the newest released and under-development version of the Linux kernel. Quite literally: &lt;a href=&#34;https://github.com/torvalds/linux&#34;&gt;github.com/torvalds/linux&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h3&gt;
