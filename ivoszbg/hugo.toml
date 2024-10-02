@@ -13,9 +13,10 @@ target = 'static/images'
 
 [params]
    ShowBreadCrumbs = true
+   defaultTheme = "light"
   [params.profileMode]
     enabled = true
-    title = "<Title>" # optional, default will be site title
+    title = "Ivaylo Ivanov" # optional, default will be site title
 #   subtitle = "This is subtitle"
     imageUrl = "/images/pfp1.jpg" # optional
     imageTitle = "hey, my profile picture is supposed to be here :<" # optional
