@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ivaylo Ivanov</title>
-    <link>http://localhost:38717/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Ivaylo Ivanov</description>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2024 18:48:50 +0300</lastBuildDate>
-    <atom:link href="http://localhost:38717/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jan 2025 20:10:30 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding the reason behind the infamous S22 boot loops</title>
+      <link>http://localhost:1313/blog/s22-bootloop/</link>
+      <pubDate>Sun, 12 Jan 2025 20:10:30 +0200</pubDate>
+      <guid>http://localhost:1313/blog/s22-bootloop/</guid>
+      <description>&lt;p&gt;As some of you may know, there&amp;rsquo;s been quite a lot of issues with the S22 lineup - from screen defects appearing from nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don&amp;rsquo;t want to read about specifics of how I found the problem and how I fixed it (in a way that&amp;rsquo;s not not preferable), skip to the end of the post for a conclusion.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Bringing Mainline Linux to life on ATM7051 handhelds</title>
-      <link>http://localhost:38717/blog/powkiddy-x51/</link>
+      <link>http://localhost:1313/blog/powkiddy-x51/</link>
       <pubDate>Wed, 02 Oct 2024 18:48:50 +0300</pubDate>
-      <guid>http://localhost:38717/blog/powkiddy-x51/</guid>
+      <guid>http://localhost:1313/blog/powkiddy-x51/</guid>
       <description>&lt;h2 id=&#34;mainline-linux-on-the-powkiddy-x51&#34;&gt;Mainline Linux on the Powkiddy X51&lt;/h2&gt;
 &lt;p&gt;For those who don&amp;rsquo;t know, the Mainline Linux kernel (upstream) is the newest released and under-development version of the Linux kernel. Quite literally: &lt;a href=&#34;https://github.com/torvalds/linux&#34;&gt;github.com/torvalds/linux&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h3&gt;
@@ -20,9 +27,9 @@
     </item>
     <item>
       <title>My work</title>
-      <link>http://localhost:38717/portfolio/</link>
+      <link>http://localhost:1313/portfolio/</link>
       <pubDate>Wed, 25 Sep 2024 18:47:52 +0300</pubDate>
-      <guid>http://localhost:38717/portfolio/</guid>
+      <guid>http://localhost:1313/portfolio/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;linux-contributions&#34;&gt;Linux Contributions&lt;/h1&gt;
 &lt;p&gt;List of ARM/ARM64 hardware that I&amp;rsquo;ve brought up from the zero.
@@ -31,51 +38,51 @@ It might or might not have been merged yet (or is still sitting in my torvalds/l
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;SoC&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Component&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Status/Description&lt;/th&gt;
+          &lt;th&gt;SoC&lt;/th&gt;
+          &lt;th&gt;Component&lt;/th&gt;
+          &lt;th&gt;Status/Description&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;ATM7051&lt;/strong&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Timer&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Main block works&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;ATM7051&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Timer&lt;/td&gt;
+          &lt;td&gt;Main block works&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Multicore&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;All cores work&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Multicore&lt;/td&gt;
+          &lt;td&gt;All cores work&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;I2C/UART&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Works with fixed clocks&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;I2C/UART&lt;/td&gt;
+          &lt;td&gt;Works with fixed clocks&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;SIRQ&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Secondary interrupt controller with support for up to 3 external interrupt lines (e.g., for MMC and PMIC)&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;SIRQ&lt;/td&gt;
+          &lt;td&gt;Secondary interrupt controller with support for up to 3 external interrupt lines (e.g., for MMC and PMIC)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;SPS&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Smart Power System for managing CPU-related power gates&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;SPS&lt;/td&gt;
+          &lt;td&gt;Smart Power System for managing CPU-related power gates&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Pinctrl&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Partial support due to limited kernel source availability&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Pinctrl&lt;/td&gt;
+          &lt;td&gt;Partial support due to limited kernel source availability&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;DMA&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;DMA&lt;/td&gt;
+          &lt;td&gt;Works&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Regulators&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Works&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Regulators&lt;/td&gt;
+          &lt;td&gt;Works&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -83,9 +90,9 @@ It might or might not have been merged yet (or is still sitting in my torvalds/l
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:38717/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 25 Sep 2024 18:36:36 +0300</pubDate>
-      <guid>http://localhost:38717/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;I am Ivaylo Ivanov, a 17-year-old aspiring embedded enthusiast from Bulgaria, specializing in Linux kernel and low-level development. I&amp;rsquo;m currently studying in the 11th grade at PPMG &amp;ldquo;Geo Milev&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;With &lt;strong&gt;six years&lt;/strong&gt; of programming experience, including &lt;strong&gt;four years&lt;/strong&gt; dedicated to low-level systems programming, I have a strong foundation in open-source technologies and embedded systems.&lt;/p&gt;
