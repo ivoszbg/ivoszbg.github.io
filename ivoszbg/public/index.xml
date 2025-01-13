@@ -31,10 +31,11 @@
       <pubDate>Wed, 25 Sep 2024 18:47:52 +0300</pubDate>
       <guid>http://localhost:1313/portfolio/</guid>
       <description>&lt;hr&gt;
-&lt;h1 id=&#34;linux-contributions&#34;&gt;Linux Contributions&lt;/h1&gt;
+&lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
 &lt;p&gt;List of ARM/ARM64 hardware that I&amp;rsquo;ve brought up from the zero.
-It might or might not have been merged yet (or is still sitting in my torvalds/linux fork):&lt;/p&gt;
-&lt;h3 id=&#34;system-on-chips-socs&#34;&gt;System on Chips (SoCs)&lt;/h3&gt;
+All of this could be found either on my &lt;a href=&#34;https://github.com/ivoszbg&#34;&gt;github page&lt;/a&gt; or &lt;a href=&#34;https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&amp;amp;q=Ivaylo+Ivanov&#34;&gt;the linux mail lists&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;devices--system-on-chips-socs&#34;&gt;Devices &amp;amp; System on Chips (SoCs)&lt;/h2&gt;
+&lt;hr&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -47,46 +48,46 @@ It might or might not have been merged yet (or is still sitting in my torvalds/l
       &lt;tr&gt;
           &lt;td&gt;&lt;strong&gt;ATM7051&lt;/strong&gt;&lt;/td&gt;
           &lt;td&gt;Timer&lt;/td&gt;
-          &lt;td&gt;Main block works&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;Multicore&lt;/td&gt;
-          &lt;td&gt;All cores work&lt;/td&gt;
+          &lt;td&gt;CPUs&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;I2C/UART&lt;/td&gt;
-          &lt;td&gt;Works with fixed clocks&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;SIRQ&lt;/td&gt;
-          &lt;td&gt;Secondary interrupt controller with support for up to 3 external interrupt lines (e.g., for MMC and PMIC)&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;SPS&lt;/td&gt;
-          &lt;td&gt;Smart Power System for managing CPU-related power gates&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;Pinctrl&lt;/td&gt;
-          &lt;td&gt;Partial support due to limited kernel source availability&lt;/td&gt;
+          &lt;td&gt;WIP ⏳&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;DMA&lt;/td&gt;
-          &lt;td&gt;Works&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;Regulators&lt;/td&gt;
-          &lt;td&gt;Works&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;This was relatively hard to bring up, because there are no absolutely no sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored my emails, so I had to reverse-engineer a lot of things. Thankfully I managed to also find ancient sources for a somewhat similar platform, from where I borrowed information about registers.&lt;/p&gt;</description>
+&lt;p&gt;The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
