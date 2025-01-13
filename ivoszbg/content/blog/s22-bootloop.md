@@ -4,7 +4,7 @@ date = 2025-01-12T20:10:30+02:00
 ShowToc = "true"
 type = "post"
 +++
-As some of you may know, there's been quite a lot of issues with the S22 lineup - from screen defects appearing from nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don't want to read about specifics of how I found the problem and how I fixed it (in a way that's not not preferable), skip to the end of the post for a conclusion.
+As some of you may know, there's been quite a lot of issues with the S22 lineup - from screen defects appearing out of nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don't want to read about specifics of how I found the problem and how I fixed it (in a way that's not not preferable), skip to the end of the post for a conclusion.
 
 **Please not that every device is different. What I'm describing here is my experience with my unit, yours may be different and could very well have a completely different issue.**
 
