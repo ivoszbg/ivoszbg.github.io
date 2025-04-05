@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Blogs | Ivaylo Ivanov</title>
 <meta name="keywords" content="">
 <meta name="description" content="Blogs - Ivaylo Ivanov">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blog/">
+<link rel="canonical" href="https://ivoszbg.github.io/blog/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fe2314709cbfd64d75002345f3a0d9eba1dc1bce19d7ab334c4103254dd1929f.css" integrity="sha256-/iMUcJy/1k11ACNF86DZ66HcG84Z16szTEEDJU3Rkp8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://ivoszbg.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ivoszbg.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ivoszbg.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ivoszbg.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ivoszbg.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/">
+<link rel="alternate" type="application/rss+xml" href="https://ivoszbg.github.io/blog/index.xml">
+<link rel="alternate" hreflang="en" href="https://ivoszbg.github.io/blog/">
 <noscript>
     <style>
         #theme-toggle,
@@ -28,7 +28,30 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:title" content="Blogs" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ivoszbg.github.io/blog/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blogs"/>
+<meta name="twitter:description" content=""/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://ivoszbg.github.io/blog/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -42,7 +65,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Ivaylo Ivanov (Alt + H)">Ivaylo Ivanov</a>
+            <a href="https://ivoszbg.github.io/" accesskey="h" title="Ivaylo Ivanov (Alt + H)">Ivaylo Ivanov</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -68,17 +91,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/blog/" title="Blogs">
+                <a href="https://ivoszbg.github.io/blog/" title="Blogs">
                     <span class="active">Blog posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/portfolio/" title="My work">
+                <a href="https://ivoszbg.github.io/portfolio/" title="My work">
                     <span>My work</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About">
+                <a href="https://ivoszbg.github.io/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -86,7 +109,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://ivoszbg.github.io/">Home</a></div>
   <h1>
     Blogs
   </h1>
@@ -94,15 +117,30 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Adventures with the Volla Phone Quintus - part 1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Initial efforts Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.
+LK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:
+LK has its own device tree and needs to apply the dtbo. That means you can’t just erase the dtbo partition. The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly. Therefore, the approach I’m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness. This is the command I used to make a boot image:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-05 11:27:50 +0300 EEST'>April 5, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Adventures with the Volla Phone Quintus - part 1" href="https://ivoszbg.github.io/blog/quintus-hacking-1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Finding the reason behind the infamous S22 boot loops
     </h2>
   </header>
   <div class="entry-content">
-    <p>As some of you may know, there’s been quite a lot of issues with the S22 lineup - from screen defects appearing from nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don’t want to read about specifics of how I found the problem and how I fixed it (in a way that’s not not preferable), skip to the end of the post for a conclusion.
+    <p>As some of you may know, there’s been quite a lot of issues with the S22 lineup - from screen defects appearing out of nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don’t want to read about specifics of how I found the problem and how I fixed it (in a way that’s not not preferable), skip to the end of the post for a conclusion.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-12 20:10:30 +0200 EET'>January 12, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Finding the reason behind the infamous S22 boot loops" href="http://localhost:1313/blog/s22-bootloop/"></a>
+  <a class="entry-link" aria-label="post link to Finding the reason behind the infamous S22 boot loops" href="https://ivoszbg.github.io/blog/s22-bootloop/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -116,12 +154,12 @@ A bit of history I’ve been working on SoC and device bringup as a Linux kernel
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-10-02 18:48:50 +0300 EEST'>October 2, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Bringing Mainline Linux to life on ATM7051 handhelds" href="http://localhost:1313/blog/powkiddy-x51/"></a>
+  <a class="entry-link" aria-label="post link to Bringing Mainline Linux to life on ATM7051 handhelds" href="https://ivoszbg.github.io/blog/powkiddy-x51/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Ivaylo Ivanov</a></span> · 
+        <span>&copy; 2025 <a href="https://ivoszbg.github.io/">Ivaylo Ivanov</a></span> · 
 
     <span>
         Powered by

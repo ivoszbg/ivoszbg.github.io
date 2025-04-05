@@ -2,24 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ivaylo Ivanov</title>
-    <link>http://localhost:1313/</link>
+    <link>https://ivoszbg.github.io/</link>
     <description>Recent content on Ivaylo Ivanov</description>
-    <generator>Hugo -- 0.140.2</generator>
+    <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2025 20:10:30 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Apr 2025 11:27:50 +0300</lastBuildDate>
+    <atom:link href="https://ivoszbg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adventures with the Volla Phone Quintus - part 1</title>
+      <link>https://ivoszbg.github.io/blog/quintus-hacking-1/</link>
+      <pubDate>Sat, 05 Apr 2025 11:27:50 +0300</pubDate>
+      <guid>https://ivoszbg.github.io/blog/quintus-hacking-1/</guid>
+      <description>&lt;h3 id=&#34;initial-efforts&#34;&gt;Initial efforts&lt;/h3&gt;
+&lt;p&gt;Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.&lt;/p&gt;
+&lt;p&gt;LK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LK has its own device tree and needs to apply the dtbo. That means you can&amp;rsquo;t just erase the dtbo partition.&lt;/li&gt;
+&lt;li&gt;The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Therefore, the approach I&amp;rsquo;m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness.
+This is the command I used to make a boot image:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Finding the reason behind the infamous S22 boot loops</title>
-      <link>http://localhost:1313/blog/s22-bootloop/</link>
+      <link>https://ivoszbg.github.io/blog/s22-bootloop/</link>
       <pubDate>Sun, 12 Jan 2025 20:10:30 +0200</pubDate>
-      <guid>http://localhost:1313/blog/s22-bootloop/</guid>
-      <description>&lt;p&gt;As some of you may know, there&amp;rsquo;s been quite a lot of issues with the S22 lineup - from screen defects appearing from nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don&amp;rsquo;t want to read about specifics of how I found the problem and how I fixed it (in a way that&amp;rsquo;s not not preferable), skip to the end of the post for a conclusion.&lt;/p&gt;</description>
+      <guid>https://ivoszbg.github.io/blog/s22-bootloop/</guid>
+      <description>&lt;p&gt;As some of you may know, there&amp;rsquo;s been quite a lot of issues with the S22 lineup - from screen defects appearing out of nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don&amp;rsquo;t want to read about specifics of how I found the problem and how I fixed it (in a way that&amp;rsquo;s not not preferable), skip to the end of the post for a conclusion.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bringing Mainline Linux to life on ATM7051 handhelds</title>
-      <link>http://localhost:1313/blog/powkiddy-x51/</link>
+      <link>https://ivoszbg.github.io/blog/powkiddy-x51/</link>
       <pubDate>Wed, 02 Oct 2024 18:48:50 +0300</pubDate>
-      <guid>http://localhost:1313/blog/powkiddy-x51/</guid>
+      <guid>https://ivoszbg.github.io/blog/powkiddy-x51/</guid>
       <description>&lt;h2 id=&#34;mainline-linux-on-the-powkiddy-x51&#34;&gt;Mainline Linux on the Powkiddy X51&lt;/h2&gt;
 &lt;p&gt;For those who don&amp;rsquo;t know, the Mainline Linux kernel (upstream) is the newest released and under-development version of the Linux kernel. Quite literally: &lt;a href=&#34;https://github.com/torvalds/linux&#34;&gt;github.com/torvalds/linux&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h3&gt;
@@ -27,9 +42,9 @@
     </item>
     <item>
       <title>My work</title>
-      <link>http://localhost:1313/portfolio/</link>
+      <link>https://ivoszbg.github.io/portfolio/</link>
       <pubDate>Wed, 25 Sep 2024 18:47:52 +0300</pubDate>
-      <guid>http://localhost:1313/portfolio/</guid>
+      <guid>https://ivoszbg.github.io/portfolio/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
 &lt;p&gt;List of ARM/ARM64 hardware that I&amp;rsquo;ve brought up from the zero.
@@ -91,13 +106,12 @@ All of this could be found either on my &lt;a href=&#34;https://github.com/ivosz
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://ivoszbg.github.io/about/</link>
       <pubDate>Wed, 25 Sep 2024 18:36:36 +0300</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://ivoszbg.github.io/about/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;I am Ivaylo Ivanov, a 17-year-old aspiring embedded enthusiast from Bulgaria, specializing in Linux kernel and low-level development. I&amp;rsquo;m currently studying in the 11th grade at PPMG &amp;ldquo;Geo Milev&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;With &lt;strong&gt;six years&lt;/strong&gt; of programming experience, including &lt;strong&gt;four years&lt;/strong&gt; dedicated to low-level systems programming, I have a strong foundation in open-source technologies and embedded systems.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;With &lt;strong&gt;six years&lt;/strong&gt; of programming experience, including &lt;strong&gt;four years&lt;/strong&gt; dedicated to low-level systems programming, I have a strong foundation in open-source technologies and embedded systems.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;You can contact me at &lt;a href=&#34;mailto:ivo.ivanov.ivanov1@gmail.com&#34;&gt;ivo.ivanov.ivanov1@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

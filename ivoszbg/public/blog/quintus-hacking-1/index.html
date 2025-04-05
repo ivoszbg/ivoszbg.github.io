@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Adventures with the Volla Phone Quintus - part 1 | Ivaylo Ivanov</title>
+<meta name="keywords" content="">
+<meta name="description" content="Initial efforts
+Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.
+LK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:
+
+LK has its own device tree and needs to apply the dtbo. That means you can&rsquo;t just erase the dtbo partition.
+The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly.
+
+Therefore, the approach I&rsquo;m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness.
+This is the command I used to make a boot image:">
+<meta name="author" content="">
+<link rel="canonical" href="https://ivoszbg.github.io/blog/quintus-hacking-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fe2314709cbfd64d75002345f3a0d9eba1dc1bce19d7ab334c4103254dd1929f.css" integrity="sha256-/iMUcJy/1k11ACNF86DZ66HcG84Z16szTEEDJU3Rkp8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ivoszbg.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ivoszbg.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ivoszbg.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ivoszbg.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ivoszbg.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ivoszbg.github.io/blog/quintus-hacking-1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Adventures with the Volla Phone Quintus - part 1" />
+<meta property="og:description" content="Initial efforts
+Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.
+LK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:
+
+LK has its own device tree and needs to apply the dtbo. That means you can&rsquo;t just erase the dtbo partition.
+The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly.
+
+Therefore, the approach I&rsquo;m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness.
+This is the command I used to make a boot image:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivoszbg.github.io/blog/quintus-hacking-1/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2025-04-05T11:27:50+03:00" />
+<meta property="article:modified_time" content="2025-04-05T11:27:50+03:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Adventures with the Volla Phone Quintus - part 1"/>
+<meta name="twitter:description" content="Initial efforts
+Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.
+LK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:
+
+LK has its own device tree and needs to apply the dtbo. That means you can&rsquo;t just erase the dtbo partition.
+The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly.
+
+Therefore, the approach I&rsquo;m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness.
+This is the command I used to make a boot image:"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://ivoszbg.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Adventures with the Volla Phone Quintus - part 1",
+      "item": "https://ivoszbg.github.io/blog/quintus-hacking-1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Adventures with the Volla Phone Quintus - part 1",
+  "name": "Adventures with the Volla Phone Quintus - part 1",
+  "description": "Initial efforts Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.\nLK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:\nLK has its own device tree and needs to apply the dtbo. That means you can\u0026rsquo;t just erase the dtbo partition. The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly. Therefore, the approach I\u0026rsquo;m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness. This is the command I used to make a boot image:\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Initial efforts Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.\nLK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:\nLK has its own device tree and needs to apply the dtbo. That means you can’t just erase the dtbo partition. The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly. Therefore, the approach I’m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness. This is the command I used to make a boot image:\npython3 mkbootimg/mkbootimg.py \\ --kernel u-boot.gz \\ --ramdisk fitImage \\ --dtb disassembly/boot/out/dtb \\ --header_version 2 \\ --os_version 14.0.0 \\ --os_patch_level 2024-10 \\ --cmdline \"bootopt=64S3,32N2,64N2\" \\ --base 0x0 \\ --kernel_offset 0x40080000 \\ --ramdisk_offset 0x51100000 \\ --tags_offset 0x47c80000 \\ --dtb_offset 0x47c80000 \\ --pagesize 2048 \\ --output boot.img Wiring up uart I began testing if uniLoader boots by setting some bits in the wdt to see if it would reboot. Luckily it did, but the framebuffer would not update, so I can’t really debug what is going on without uart access.\nTo obtain such, the phone needs to be disassembled.\nThe RX and TX pins are exposed on the left side of the motherboard. The pins are pretty small, but for debugging wiring up TX is enough.\nSo, after connecting TX from the phone to the RX of my adapter and wiring up GND, I can fire up picocom to get serial logs with this command:\nsudo picocom -b 921600 /dev/ttyUSB0 Bringing up u-boot In order to get a more verbose second stage bootloader, I started working on u-boot. A friend of mine had gotten it to work on his Dimensity 7300 device, which seemed similar enough, so I forked his repo and changed a few MMIO addresses, according to what Quintus has.\nIt was relatively simple. The hardest part was figuring out a rather hilarious memory issue, and that took 5 minutes.\nWhat about Mainline Linux? Since I don’t have wired up RX, I needed a way to get Linux in the memory and tell u-boot to jump to it. The latter is easy, setting the following kconfig options makes it automatically jump to the given address:\nCONFIG_USE_BOOTCOMMAND=y CONFIG_BOOTCOMMAND=\"bootm 0x51100000\" I cloned linux-next, wrote a simple device tree that has nodes for uart, cpus via PSCI and timer.\n/ { ... aliases { serial0 = \u0026uart0; }; chosen { stdout-path = \"serial0:921600n8\"; }; memory@40000000 { device_type = \"memory\"; reg = \u003c0x40000000 0x20000000\u003e; }; ... cpus { #address-cells = \u003c1\u003e; #size-cells = \u003c0\u003e; cpu0: cpu@0 { device_type = \"cpu\"; compatible = \"arm,cortex-a55\"; reg = \u003c0x0\u003e; enable-method = \"psci\"; }; ... }; soc { ... gic: interrupt-controller@c000000 { ... ppi-partitions { ... }; }; uart0: serial@11002000 { compatible = \"mediatek,mt6797-uart\", \"mediatek,mt6577-uart\"; ... }; }; timer { compatible = \"arm,armv8-timer\"; ... }; Since the previous bootloader loads the ramdisk at 0x51100000, I made a FIT image containing the new kernel and dt. After packaging it all into a boot.img and flashing it with mtkclient, it ‘just works’.\nConclusion It took a few days of hopes and prayers to get a stable foundation for mainline development. Now that I have a solid boot chain, I can focus on hardware bringup rather than blindly trying to boot things.\nI’ll be upstreaming my work in the following weeks/months.\nUseful Links (Note: I am in no way responsible for any damage you do to your device by trying to replicate what I’ve done. If you want to experiment with flashing directly to your UFS, proceed at your own risk.)\nmy linux-next fork for quintus: ivoszbg/linux-next mtkclient: bkerler/mtkclient support for quintus in uniLoader: ivoszbg/uniLoader ",
+  "wordCount" : "658",
+  "inLanguage": "en",
+  "datePublished": "2025-04-05T11:27:50+03:00",
+  "dateModified": "2025-04-05T11:27:50+03:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivoszbg.github.io/blog/quintus-hacking-1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ivaylo Ivanov",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivoszbg.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ivoszbg.github.io/" accesskey="h" title="Ivaylo Ivanov (Alt + H)">Ivaylo Ivanov</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ivoszbg.github.io/blog/" title="Blogs">
+                    <span>Blog posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivoszbg.github.io/portfolio/" title="My work">
+                    <span>My work</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivoszbg.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ivoszbg.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ivoszbg.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Adventures with the Volla Phone Quintus - part 1
+    </h1>
+    <div class="post-meta"><span title='2025-04-05 11:27:50 +0300 EEST'>April 5, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#initial-efforts" aria-label="Initial efforts">Initial efforts</a></li>
+                <li>
+                    <a href="#wiring-up-uart" aria-label="Wiring up uart">Wiring up uart</a></li>
+                <li>
+                    <a href="#bringing-up-u-boot" aria-label="Bringing up u-boot">Bringing up u-boot</a></li>
+                <li>
+                    <a href="#what-about-mainline-linux" aria-label="What about Mainline Linux?">What about Mainline Linux?</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a></li>
+                <li>
+                    <a href="#useful-links" aria-label="Useful Links">Useful Links</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="initial-efforts">Initial efforts<a hidden class="anchor" aria-hidden="true" href="#initial-efforts">#</a></h3>
+<p>Following the standard procedure, I first started by unlocking the phone bootloader, which was easy. I flashed a verity disabled vbmeta and I was ready to start experimenting with custom boot images.</p>
+<p>LK expects a gzipped kernel image and a valid dtb that it can append a dtbo to. Unfortunately, the device has two very annoying quirks:</p>
+<ul>
+<li>LK has its own device tree and needs to apply the dtbo. That means you can&rsquo;t just erase the dtbo partition.</li>
+<li>The dtbo has 300 lines of required nodes for LK to boot, which means that making it apply to a mainline device tree will be ugly.</li>
+</ul>
+<p>Therefore, the approach I&rsquo;m taking is to use a secondary bootloader (loaded as a kernel image by LK), which later on can boot mainline linux without the ugliness.
+This is the command I used to make a boot image:</p>
+<pre tabindex="0"><code>python3 mkbootimg/mkbootimg.py \
+--kernel u-boot.gz \
+--ramdisk fitImage \
+--dtb disassembly/boot/out/dtb \
+--header_version 2 \
+--os_version 14.0.0 \
+--os_patch_level 2024-10 \
+--cmdline &#34;bootopt=64S3,32N2,64N2&#34; \
+--base 0x0 \
+--kernel_offset 0x40080000 \
+--ramdisk_offset 0x51100000 \
+--tags_offset 0x47c80000 \
+--dtb_offset 0x47c80000 \
+--pagesize 2048 \
+--output boot.img
+</code></pre><h3 id="wiring-up-uart">Wiring up uart<a hidden class="anchor" aria-hidden="true" href="#wiring-up-uart">#</a></h3>
+<p>I began testing if uniLoader boots by setting some bits in the wdt to see if it would reboot. Luckily it did, but the framebuffer would not update, so I can&rsquo;t really debug what is going on without uart access.</p>
+<p>To obtain such, the phone needs to be disassembled.</p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/quintus-part1/20250404_174653.jpg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        <img loading="lazy" src="/images/quintus-part1/20250404_175713.jpg" alt="alt"  />
+    </div>
+</div>
+
+
+<p>The RX and TX pins are exposed on the left side of the motherboard. The pins are pretty small, but for debugging wiring up TX is enough.</p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; padding-right: 10px;">
+        <img loading="lazy" src="/images/quintus-part1/20250404_175721.jpg" alt="alt"  />
+    </div>
+    <div style="flex: 1;">
+        <img loading="lazy" src="/images/quintus-part1/20250404_182146.jpg" alt="alt"  />
+    </div>
+</div>
+
+
+<p>So, after connecting TX from the phone to the RX of my adapter and wiring up GND, I can fire up picocom to get serial logs with this command:</p>
+<pre tabindex="0"><code>sudo picocom -b 921600 /dev/ttyUSB0
+</code></pre><p><img loading="lazy" src="/images/quintus-part1/bootloader-logs.png#center" alt="alt"  />
+</p>
+<h3 id="bringing-up-u-boot">Bringing up u-boot<a hidden class="anchor" aria-hidden="true" href="#bringing-up-u-boot">#</a></h3>
+<p>In order to get a more verbose second stage bootloader, I started working on u-boot. A friend of mine <a href="https://github.com/MT6878-Mainline/u-boot">had gotten it to work</a> on his Dimensity 7300 device, which seemed similar enough, so I forked his repo and changed a few MMIO addresses, according to what Quintus has.</p>
+<p><img loading="lazy" src="/images/quintus-part1/u-boot-expection.png#center" alt="alt"  />
+</p>
+<p>It was relatively simple. The hardest part was figuring out a rather hilarious memory issue, and that took 5 minutes.</p>
+<p><img loading="lazy" src="/images/quintus-part1/u-boot-memory.png#center" alt="alt"  />
+</p>
+<h3 id="what-about-mainline-linux">What about Mainline Linux?<a hidden class="anchor" aria-hidden="true" href="#what-about-mainline-linux">#</a></h3>
+<p>Since I don&rsquo;t have wired up RX, I needed a way to get Linux in the memory and tell u-boot to jump to it. The latter is easy, setting the following kconfig options makes it automatically jump to the given address:</p>
+<pre tabindex="0"><code>CONFIG_USE_BOOTCOMMAND=y
+CONFIG_BOOTCOMMAND=&#34;bootm 0x51100000&#34;
+</code></pre><p>I cloned linux-next, wrote a simple device tree that has nodes for uart, cpus via PSCI and timer.</p>
+<pre tabindex="0"><code>/ {
+	...
+	aliases {
+		serial0 = &amp;uart0;
+	};
+
+	chosen {
+		stdout-path = &#34;serial0:921600n8&#34;;
+	};
+
+	memory@40000000 {
+		device_type = &#34;memory&#34;;
+		reg = &lt;0x40000000 0x20000000&gt;;
+	};
+	...
+	cpus {
+		#address-cells = &lt;1&gt;;
+		#size-cells = &lt;0&gt;;
+
+		cpu0: cpu@0 {
+			device_type = &#34;cpu&#34;;
+			compatible = &#34;arm,cortex-a55&#34;;
+			reg = &lt;0x0&gt;;
+			enable-method = &#34;psci&#34;;
+		};
+		...
+	};
+
+	soc {
+		...
+		gic: interrupt-controller@c000000 {
+			...
+
+			ppi-partitions {
+				...
+			};
+		};
+
+		uart0: serial@11002000 {
+			compatible = &#34;mediatek,mt6797-uart&#34;,
+				     &#34;mediatek,mt6577-uart&#34;;
+			...
+		};
+	};
+
+	timer {
+		compatible = &#34;arm,armv8-timer&#34;;
+		...
+	};
+</code></pre><p>Since the previous bootloader loads the ramdisk at 0x51100000, I made a FIT image containing the new kernel and dt. After packaging it all into a boot.img and flashing it with mtkclient, it &lsquo;just works&rsquo;.</p>
+<p><img loading="lazy" src="/images/quintus-part1/mainline-booting.png#center" alt="alt"  />
+</p>
+<h3 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h3>
+<p>It took a few days of hopes and prayers to get a stable foundation for mainline development. Now that I have a solid boot chain, I can focus on hardware bringup rather than blindly trying to boot things.</p>
+<p>I’ll be upstreaming my work in the following weeks/months.</p>
+<h3 id="useful-links">Useful Links<a hidden class="anchor" aria-hidden="true" href="#useful-links">#</a></h3>
+<p>(Note: I am <strong>in no way responsible</strong> for any damage you do to your device by trying to replicate what I&rsquo;ve done. If you want to experiment with flashing directly to your UFS, proceed at your own risk.)</p>
+<ul>
+<li>my linux-next fork for quintus: <a href="https://github.com/ivoszbg/linux-next/blob/v6.14rc5-quintus/">ivoszbg/linux-next</a></li>
+<li>mtkclient: <a href="https://github.com/bkerler/mtkclient">bkerler/mtkclient</a></li>
+<li>support for quintus in uniLoader: <a href="https://github.com/ivoszbg/uniLoader/commit/5ee9fd9c1a71168abfac4704e8bb8458a9cfb0dc">ivoszbg/uniLoader</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://ivoszbg.github.io/">Ivaylo Ivanov</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
