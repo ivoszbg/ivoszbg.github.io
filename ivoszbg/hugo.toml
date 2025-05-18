@@ -1,7 +1,7 @@
 baseURL = "https://ivoszbg.github.io/"
 languageCode = 'en-us'
 title = 'Ivaylo Ivanov'
-theme = 'PaperMod'
+theme = 'typo'
 
 [[module.mounts]]
 source = 'static'
@@ -12,51 +12,60 @@ source = 'images'
 target = 'static/images'
 
 [params]
-   ShowBreadCrumbs = true
-   defaultTheme = "light"
-  # Add Homepage Specific Parameters
-  [params.home]
-    showRecentPosts = true
-    recentPostsCount = 5 # Adjust the number as needed
-    showPortfolio = true
-    showAbout = true
+description = "Ivaylo's Blog"
 
-  [params.profileMode]
-    enabled = true
-    title = "Ivaylo Ivanov" # optional, default will be site title
-#   subtitle = "This is subtitle"
-    imageUrl = "/images/pfp1.jpg" # optional
-    imageTitle = "hey, my profile picture is supposed to be here :<" # optional
-    imageWidth = 110 # custom size
-    imageHeight = 110 # custom size
+# Appearance settings
+theme = 'dark'
+colorPalette = 'default'
+hideHeader = false
 
-  [[params.profileMode.buttons]]
-    name = "My work"
-    url = "/portfolio"
+# Intro on main page, content is markdown
+homeIntroTitle = 'Hi!'
+homeIntroContent = """
+I am a 17 years old embedded developer from Bulgaria, stuyding in 11th grade with software and hardware at PPMG “Geo Milev”. At night, I'm working on bringing support for modern Samsung and Qualcomm SoCs in the mainline Linux kernel.
 
-  [[params.socialIcons]]
-    name = "Linkedin"
-    url = "https://www.linkedin.com/in/ivaylo-ivanov-ivanov1/"
+See ya at 🐧[linux-next](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&q=Ivaylo+Ivanov)!
+"""
 
-  [[params.socialIcons]]
-    name = "Github"
-    url = "https://github.com/ivoszbg"
+# Collection to display on home
+homeCollectionTitle = 'Blogs'
+homeCollection = 'blog'
 
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:ivo.ivanov.ivanov1@gmail.com"
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
 
-[menus]
-  [[menus.main]]
-    identifier = 'posts'
-    name = 'Blog posts'
-    pageRef = '/blog/'
-    weight = 10
-  [[menus.main]]
-    name = 'My work'
-    pageRef = '/portfolio/'
-    weight = 20
-  [[menus.main]]
-    name = 'About'
-    pageRef = '/about/'
-    weight = 30
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "Home"
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/ivaylo-ivanov-ivanov1/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/ivoszbg"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "blogs"
+url = "/blog"
+
+[[params.menu]]
+name = "achievements"
+url = "/portfolio"
+
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'

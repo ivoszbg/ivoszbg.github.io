@@ -1,383 +1,175 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en-us"
+  dir="ltr">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>My work | Ivaylo Ivanov</title>
-<meta name="keywords" content="">
-<meta name="description" content="
-Linux
-List of ARM/ARM64 hardware that I&rsquo;ve brought up from the zero.
-All of this could be found either on my github page or the linux mail lists
-Devices &amp; System on Chips (SoCs)
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 
 
-  
-      
-          SoC
-          Component
-          Status/Description
-      
-  
-  
-      
-          ATM7051
-          Timer
-          ✅
-      
-      
-          
-          CPUs
-          ✅
-      
-      
-          
-          I2C/UART
-          ✅
-      
-      
-          
-          SIRQ
-          ✅
-      
-      
-          
-          SPS
-          ✅
-      
-      
-          
-          Pinctrl
-          WIP ⏳
-      
-      
-          
-          DMA
-          ✅
-      
-      
-          
-          Regulators
-          ✅
-      
-  
-
-The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.">
-<meta name="author" content="">
-<link rel="canonical" href="https://ivoszbg.github.io/portfolio/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.fe2314709cbfd64d75002345f3a0d9eba1dc1bce19d7ab334c4103254dd1929f.css" integrity="sha256-/iMUcJy/1k11ACNF86DZ66HcG84Z16szTEEDJU3Rkp8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ivoszbg.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ivoszbg.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ivoszbg.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ivoszbg.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ivoszbg.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ivoszbg.github.io/portfolio/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-</noscript><meta property="og:title" content="My work" />
-<meta property="og:description" content="
-Linux
-List of ARM/ARM64 hardware that I&rsquo;ve brought up from the zero.
-All of this could be found either on my github page or the linux mail lists
-Devices &amp; System on Chips (SoCs)
 
 
-  
-      
-          SoC
-          Component
-          Status/Description
-      
-  
-  
-      
-          ATM7051
-          Timer
-          ✅
-      
-      
-          
-          CPUs
-          ✅
-      
-      
-          
-          I2C/UART
-          ✅
-      
-      
-          
-          SIRQ
-          ✅
-      
-      
-          
-          SPS
-          ✅
-      
-      
-          
-          Pinctrl
-          WIP ⏳
-      
-      
-          
-          DMA
-          ✅
-      
-      
-          
-          Regulators
-          ✅
-      
-  
-
-The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ivoszbg.github.io/portfolio/" /><meta property="article:section" content="" />
-<meta property="article:published_time" content="2024-09-25T18:47:52+03:00" />
-<meta property="article:modified_time" content="2024-09-25T18:47:52+03:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="My work"/>
-<meta name="twitter:description" content="
-Linux
-List of ARM/ARM64 hardware that I&rsquo;ve brought up from the zero.
-All of this could be found either on my github page or the linux mail lists
-Devices &amp; System on Chips (SoCs)
 
 
-  
-      
-          SoC
-          Component
-          Status/Description
-      
-  
-  
-      
-          ATM7051
-          Timer
-          ✅
-      
-      
-          
-          CPUs
-          ✅
-      
-      
-          
-          I2C/UART
-          ✅
-      
-      
-          
-          SIRQ
-          ✅
-      
-      
-          
-          SPS
-          ✅
-      
-      
-          
-          Pinctrl
-          WIP ⏳
-      
-      
-          
-          DMA
-          ✅
-      
-      
-          
-          Regulators
-          ✅
-      
-  
-
-The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers."/>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "My work",
-      "item": "https://ivoszbg.github.io/portfolio/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "My work",
-  "name": "My work",
-  "description": " Linux List of ARM/ARM64 hardware that I\u0026rsquo;ve brought up from the zero. All of this could be found either on my github page or the linux mail lists\nDevices \u0026amp; System on Chips (SoCs) SoC Component Status/Description ATM7051 Timer ✅ CPUs ✅ I2C/UART ✅ SIRQ ✅ SPS ✅ Pinctrl WIP ⏳ DMA ✅ Regulators ✅ The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.\n",
-  "keywords": [
     
-  ],
-  "articleBody": " Linux List of ARM/ARM64 hardware that I’ve brought up from the zero. All of this could be found either on my github page or the linux mail lists\nDevices \u0026 System on Chips (SoCs) SoC Component Status/Description ATM7051 Timer ✅ CPUs ✅ I2C/UART ✅ SIRQ ✅ SPS ✅ Pinctrl WIP ⏳ DMA ✅ Regulators ✅ The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.\nThere are still some essential things that have to be brought up. For example:\ndue to the lack of information I only managed to write a partial pinctrl driver. It doesn’t include any pin groups nor funcs, only gpio. the SDMMC might be a bit difficult to bring up. Device trees suggest that ATM7051 isn’t using DMA for that, which is a bit… weird. The upstream driver only has DMA support. there’s absolutely no nand drivers for Actions SoCs. Anywhere. And I’m not gonna put in the effort to reverse engineer it for such a weak platform. the GPU driver isn’t open sourced. We can use proprietary blobs with hacks, but that’ll never land in mainline. the keys aren’t wired through GPIO, but the pmic. That’s bad since we only have regulators functionality for the PMIC upstream. SoC Component Status/Description Exynos3475 CPUs 2 out of 4 cores ChipID ✅ MCT (Multi-Core Timer) ✅ Pinctrl ✅ Clock Controller Full support for all blocks HSIC/I2C ✅ eMMC ✅ MIPI DSIM/CSIM PHY ✅ Decon ✅ Mali T710 ✅ The Samsung Galaxy Xcover 3 Value edition, alongside the other devices with this SoC, have reached a point where they are close to being usable on my 6.11 kernel fork, with important hardware blocks like the Display engine, GPU, touchscreen and WIFI/BT working. Nevertheless it still has some issues that need resolving:\nSMP isn’t fully working and heavy wayland DEs like phosh are a bit unstable. the DWC2 usb is.. weird. It still has to undergo upstreaming. Here’s some pictures and a short video showcasing hardware accelerated phosh.\nSoC Component Status/Description Exynos8895 CPUs ✅ ChipID ✅ Timers ✅ Pinctrl ✅ Clock Controllers CMU-{TOP, PERIS, PERIC0, PERIC1, FSYS0, FSYS1} ✅ Serial buses ✅ SD card storage ✅ Touch screen ✅ USB ✅ (high-speed and peripheral-mode only) Display engine WIP ⏳ The Samsung Galaxy S8 is definitely not an easy platform to work on. As a high-end exynos SoCs (even though it’s from 2017), it has complex peripherals and a large amount of buses like I2Cs, UARTs, HSI2Cs. Some more things need to be brought up, like:\nthe SPEEDY bus, which is used for PMIC UFS DECON Mali G71 via Panfrost SoC Component Status/Description MSM8x12/MSM8x10 Multicore ✅ QGIC2 ✅ ARMv7 Generic Timer ✅ Pinctrl ✅ I2C/UART ✅ USB ✅ This SoC is a cut-off version of the MSM8974. MSM8212 features 4 cores and MSM8610 has 2. The biggest issue currently is that mainline does not have support for MDP3, which means that I’ll have to write a driver for it if we want a working panel driver. Meanwhile the Adreno GPU should be doable with a small amount of changes, simpleDRM and a small hack that allows MESA to use simpleDRM.\nAll progress for {MSM8x10, MSM8x12} has been achieved under the Mainline4Lumia project.\nuniLoader uniLoader is a secondary bootloader that is capable of booting the upstream Linux kernel for Android and iOS-based devices. It allows embedding the kernel and DTB to it, making it a very minimalistic bootloader that doesn’t require complex hardware drivers for stuff like storage. In fact, even MMU does not get enabled.\nThe purpose behind it is to provide a small shim for avoiding vendors’ bootloader quirks. For example:\nExynos devices past 2016 leave decon’s framebuffer refreshing disabled right before jumping to kernel, which makes initial debugging efforts when bringing up the platform to upstream linux hard Some S-Boot releases have CNTFRQ_EL0 left unset, which causes issues since the linux timer driver cannot read its value and it SErrors. It either has to be set as a hardcoded frequency property in the DT, or passed via libfdt from uniLoader (the latter is cleaner, but still has to be implemented) The currently supported architectures are ARMV7 and AARCH64. Here’s a list of the currently supported devices:\nApple iPhone 6 Samsung Galaxy Note 5 Samsung Galaxy Note 20 Samsung Galaxy A8 2018 Samsung Galaxy S6 Samsung Galaxy S8 Samsung Galaxy S9 Samsung Galaxy S20 Samsung Galaxy J4 Samsung Galaxy J5 2015 Samsung Galaxy Tab S6 Lite U-Boot In order to avoid the stock BL’s limitations, I’ve gotten u-boot working on few devices:\niPhone 5 There were many issues. To begin with, S5L8950x either entirely doesn’t have VBAR, or Apple’s implementation of it is broken, so I had to disable it. Then there were a ton of small issues here and there, which I fixed thankfully due to an emulator that I specifically wrote for S5L8950x, called “Legacy Apple Emulator”. Then I had another memory issue, where parsing the framebuffer address via DT was broken, so I had to fix that as well. And finally I brought up USB! - well, partially, since it probably needs some PHY and DWC2 config work. Only USB plug-in detection works for now. Xcover 3 Value Edition \u0026\u0026 Powkiddy X51 ",
-  "wordCount" : "921",
-  "inLanguage": "en",
-  "datePublished": "2024-09-25T18:47:52+03:00",
-  "dateModified": "2024-09-25T18:47:52+03:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ivoszbg.github.io/portfolio/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ivaylo Ivanov",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ivoszbg.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    My work | Ivaylo Ivanov
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/portfolio/"/>
+
+<meta property="og:url" content="http://localhost:1313/portfolio/">
+  <meta property="og:site_name" content="Ivaylo Ivanov">
+  <meta property="og:title" content="My work">
+  <meta property="og:description" content="Linux # The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.
+There are still some essential things that have to be brought up. For example:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-09-25T18:47:52+03:00">
+    <meta property="article:modified_time" content="2024-09-25T18:47:52+03:00">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.c84ef7d767cb9811a35d21d1f0bcb15f49465c1e026bee0cce5f22e22a0d327c.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
 </head>
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    }
 
-</script>
 
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://ivoszbg.github.io/" accesskey="h" title="Ivaylo Ivanov (Alt + H)">Ivaylo Ivanov</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://ivoszbg.github.io/blog/" title="Blogs">
-                    <span>Blog posts</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ivoszbg.github.io/portfolio/" title="My work">
-                    <span class="active">My work</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ivoszbg.github.io/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ivoszbg.github.io/">Home</a></div>
-    <h1 class="post-title entry-hint-parent">
-      My work
+
+
+
+<body class="dark">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Ivaylo Ivanov</a>
     </h1>
-    <div class="post-meta"><span title='2024-09-25 18:47:52 +0300 EEST'>September 25, 2024</span>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/blog" >
+                /blogs
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/portfolio" >
+                /achievements
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
 
 </div>
-  </header> 
-  <div class="post-content"><hr>
-<h1 id="linux">Linux<a hidden class="anchor" aria-hidden="true" href="#linux">#</a></h1>
-<p>List of ARM/ARM64 hardware that I&rsquo;ve brought up from the zero.
-All of this could be found either on my <a href="https://github.com/ivoszbg">github page</a> or <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&amp;q=Ivaylo+Ivanov">the linux mail lists</a></p>
-<h2 id="devices--system-on-chips-socs">Devices &amp; System on Chips (SoCs)<a hidden class="anchor" aria-hidden="true" href="#devices--system-on-chips-socs">#</a></h2>
-<hr>
-<table>
-  <thead>
-      <tr>
-          <th>SoC</th>
-          <th>Component</th>
-          <th>Status/Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>ATM7051</strong></td>
-          <td>Timer</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>CPUs</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>I2C/UART</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>SIRQ</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>SPS</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Pinctrl</td>
-          <td>WIP ⏳</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>DMA</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Regulators</td>
-          <td>✅</td>
-      </tr>
-  </tbody>
-</table>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">Home</a><span class="breadcrumbs-separator">/</span>
+        <a href="/portfolio/">My work</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">My work</h1>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="single-date">
+              <time datetime="2024-09-25T18:47:52&#43;03:00">September 25, 2024</time>
+            </p>
+          </div>
+        </div>
+        
+    </header>
+    
+    <div class="single-content">
+      <hr>
+<h2 class="heading" id="linux">
+  Linux
+  <a class="anchor" href="#linux">#</a>
+</h2>
 <p>The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.</p>
 <p>There are still some essential things that have to be brought up. For example:</p>
 <ul>
@@ -387,70 +179,28 @@ All of this could be found either on my <a href="https://github.com/ivoszbg">git
 <li>the GPU driver isn&rsquo;t open sourced. We can use proprietary blobs with hacks, but that&rsquo;ll never land in mainline.</li>
 <li>the keys aren&rsquo;t wired through GPIO, but the pmic. That&rsquo;s bad since we only have regulators functionality for the PMIC upstream.</li>
 </ul>
-<p><img loading="lazy" src="/images/bringing-mainline-linux-to-life-on-atm7051-handhelds-v0-rp5vjhpag0ld1.webp" alt="alt"  />
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/bringing-mainline-linux-to-life-on-atm7051-handhelds-v0-rp5vjhpag0ld1.webp" >
+    </div>
+
+    
+</figure>
 </p>
 <hr>
-<table>
-  <thead>
-      <tr>
-          <th>SoC</th>
-          <th>Component</th>
-          <th>Status/Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Exynos3475</strong></td>
-          <td>CPUs</td>
-          <td>2 out of 4 cores</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>ChipID</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>MCT (Multi-Core Timer)</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Pinctrl</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Clock Controller</td>
-          <td>Full support for all blocks</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>HSIC/I2C</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>eMMC</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>MIPI DSIM/CSIM PHY</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Decon</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Mali T710</td>
-          <td>✅</td>
-      </tr>
-  </tbody>
-</table>
 <p>The Samsung Galaxy Xcover 3 Value edition, alongside the other devices with this SoC, have reached a point where they are close to being usable on my 6.11 kernel fork, with important hardware blocks like the Display engine, GPU, touchscreen and WIFI/BT working. Nevertheless it still has some issues that need resolving:</p>
 <ul>
 <li>SMP isn&rsquo;t fully working and heavy wayland DEs like phosh are a bit unstable.</li>
@@ -459,76 +209,29 @@ All of this could be found either on my <a href="https://github.com/ivoszbg">git
 <p>It still has to undergo upstreaming. Here&rsquo;s some pictures <a href="https://i.imgur.com/fyVvY6o.mp4">and a short video showcasing hardware accelerated phosh.</a></p>
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1; padding-right: 10px;">
-        <img loading="lazy" src="/images/xcover3ve_2.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/xcover3ve_2.jpg" >
+    </div>
+
+    
+</figure>
     </div>
     <div style="flex: 1;">
-        <img loading="lazy" src="/images/xcover3ve_1.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/xcover3ve_1.jpg" >
+    </div>
+
+    
+</figure>
     </div>
 </div>
 
 
 <hr>
-<table>
-  <thead>
-      <tr>
-          <th>SoC</th>
-          <th>Component</th>
-          <th>Status/Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Exynos8895</strong></td>
-          <td>CPUs</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>ChipID</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Timers</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Pinctrl</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Clock Controllers</td>
-          <td>CMU-{TOP, PERIS, PERIC0, PERIC1, FSYS0, FSYS1} ✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Serial buses</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>SD card storage</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Touch screen</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>USB</td>
-          <td>✅ (high-speed and peripheral-mode only)</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Display engine</td>
-          <td>WIP ⏳</td>
-      </tr>
-  </tbody>
-</table>
 <p>The Samsung Galaxy S8 is definitely not an easy platform to work on. As a high-end exynos SoCs (even though it&rsquo;s from 2017), it has complex peripherals and a large amount of buses like I2Cs, UARTs, HSI2Cs. Some more things need to be brought up, like:</p>
 <ul>
 <li>the SPEEDY bus, which is used for PMIC</li>
@@ -538,7 +241,14 @@ All of this could be found either on my <a href="https://github.com/ivoszbg">git
 </ul>
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1; padding-right: 10px;">
-        <img loading="lazy" src="/images/s8_1.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/s8_1.jpg" >
+    </div>
+
+    
+</figure>
     </div>
     <div style="flex: 1;">
         
@@ -547,61 +257,37 @@ All of this could be found either on my <a href="https://github.com/ivoszbg">git
 
 
 <hr>
-<table>
-  <thead>
-      <tr>
-          <th>SoC</th>
-          <th>Component</th>
-          <th>Status/Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>MSM8x12/MSM8x10</strong></td>
-          <td>Multicore</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>QGIC2</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>ARMv7 Generic Timer</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>Pinctrl</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>I2C/UART</td>
-          <td>✅</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>USB</td>
-          <td>✅</td>
-      </tr>
-  </tbody>
-</table>
-<p>This SoC is a cut-off version of the MSM8974. MSM8212 features 4 cores and MSM8610 has 2. The biggest issue currently is that mainline does not have support for MDP3, which means that I&rsquo;ll have to write a driver for it if we want a working panel driver. Meanwhile the Adreno GPU should be doable with a small amount of changes, simpleDRM and a small hack that allows MESA to use simpleDRM.</p>
-<p>All progress for {MSM8x10, MSM8x12} has been achieved under the <a href="https://github.com/Mainline4Lumia">Mainline4Lumia project</a>.</p>
+<p>MSM8x12 series SoCs are a cut-off version of MSM8x74. MSM8x12 feature 4 cores and MSM8x10 only 2. The biggest issue currently is that mainline does not have support for MDP3, which means that I&rsquo;ll have to write a driver for it if we want a working panel driver. Meanwhile the Adreno GPU should be doable with a small amount of changes, simpleDRM and a small hack that allows MESA to use simpleDRM.</p>
+<p>All progress for {MSM8x10, MSM8x12} has been done under the <a href="https://github.com/Mainline4Lumia">Mainline4Lumia project</a>.</p>
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1; padding-right: 10px;">
-        <img loading="lazy" src="/images/535_1.jpeg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/535_1.jpeg" >
+    </div>
+
+    
+</figure>
     </div>
     <div style="flex: 1;">
-        <img loading="lazy" src="/images/435_1.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/435_1.jpg" >
+    </div>
+
+    
+</figure>
     </div>
 </div>
 
 
 <hr>
-<h1 id="uniloader">uniLoader<a hidden class="anchor" aria-hidden="true" href="#uniloader">#</a></h1>
+<h1 class="heading" id="uniloader">
+  uniLoader
+  <a class="anchor" href="#uniloader">#</a>
+</h1>
 <p><a href="https://github.com/ivoszbg/uniLoader">uniLoader</a> is a secondary bootloader that is capable of booting the upstream Linux kernel for Android and iOS-based devices. It allows embedding the kernel and DTB to it, making it a very minimalistic bootloader that doesn&rsquo;t require complex hardware drivers for stuff like storage. In fact, even MMU does not get enabled.</p>
 <p>The purpose behind it is to provide a small shim for avoiding vendors&rsquo; bootloader quirks. For example:</p>
 <ul>
@@ -622,113 +308,141 @@ All of this could be found either on my <a href="https://github.com/ivoszbg">git
 <li>Samsung Galaxy J5 2015</li>
 <li>Samsung Galaxy Tab S6 Lite</li>
 </ul>
-<h1 id="u-boot">U-Boot<a hidden class="anchor" aria-hidden="true" href="#u-boot">#</a></h1>
-<p>In order to avoid the stock BL&rsquo;s limitations, I&rsquo;ve gotten u-boot working on few devices:</p>
 <hr>
-<h2 id="iphone-5">iPhone 5<a hidden class="anchor" aria-hidden="true" href="#iphone-5">#</a></h2>
+<h1 class="heading" id="u-boot">
+  U-Boot
+  <a class="anchor" href="#u-boot">#</a>
+</h1>
+<p>In order to avoid the stock BL&rsquo;s limitations, I&rsquo;ve gotten u-boot working on few devices:</p>
+<h2 class="heading" id="iphone-5">
+  iPhone 5
+  <a class="anchor" href="#iphone-5">#</a>
+</h2>
 <p>There were many issues. To begin with, S5L8950x either entirely doesn&rsquo;t have VBAR, or Apple&rsquo;s implementation of it is broken, so I had to disable it. Then there were a ton of small issues here and there, which I fixed thankfully due to an emulator that I specifically wrote for S5L8950x, called &ldquo;Legacy Apple Emulator&rdquo;. Then I had another memory issue, where parsing the framebuffer address via DT was broken, so I had to fix that as well. And finally I brought up USB! - well, partially, since it probably needs some PHY and DWC2 config work. Only USB plug-in detection works for now.
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1; padding-right: 10px;">
-        <img loading="lazy" src="/images/iphone5_u-boot.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/iphone5_u-boot.jpg" >
+    </div>
+
+    
+</figure>
     </div>
     <div style="flex: 1;">
-        <img loading="lazy" src="/images/LAEMU.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/LAEMU.jpg" >
+    </div>
+
+    
+</figure>
     </div>
 </div>
 
 </p>
-<hr>
-<h2 id="xcover-3-value-edition--powkiddy-x51">Xcover 3 Value Edition &amp;&amp; Powkiddy X51<a hidden class="anchor" aria-hidden="true" href="#xcover-3-value-edition--powkiddy-x51">#</a></h2>
+<h2 class="heading" id="xcover-3-value-edition-powkiddy-x51">
+  Xcover 3 Value Edition, Powkiddy X51
+  <a class="anchor" href="#xcover-3-value-edition-powkiddy-x51">#</a>
+</h2>
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <div style="flex: 1; padding-right: 10px;">
-        <img loading="lazy" src="/images/xcover3ve_u-boot.jpg" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/xcover3ve_u-boot.jpg" >
+    </div>
+
+    
+</figure>
     </div>
     <div style="flex: 1;">
-        <img loading="lazy" src="/images/atm7051_u-boot.png" alt="alt"  />
+        <figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="alt" src="/images/atm7051_u-boot.png" >
+    </div>
+
+    
+</figure>
     </div>
 </div>
 
 
 
+    </div>
+  </article>
 
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
   </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
+  
+  
+
+
+
+
+
     
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://ivoszbg.github.io/">Ivaylo Ivanov</a></span> · 
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  <footer>
+    
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+    
+    
 
-</script>
+
+
+
+
+    
+
+
+
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
 </body>
 
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
 </html>

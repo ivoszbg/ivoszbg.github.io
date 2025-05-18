@@ -4,3 +4,6 @@
 [submodule "ivoszbg/themes/PaperMod"]
 	path = ivoszbg/themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "ivoszbg/themes/typo"]
+	path = ivoszbg/themes/typo
+	url = https://github.com/tomfran/typo.git
