@@ -36,9 +36,6 @@ In order to boot my own build of the Linux kernel, we need to replace the downst
 
 ### Finally seeing the penguins
 
-Of course, not everything was smooth as butter:
-![alt](/images/notsosmooth-x51.png#center)
-
 It took quite a bit of work, but I managed to get the following peripherals working:
 
 - Timer (`actions,atm7051-timer`)
