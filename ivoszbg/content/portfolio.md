@@ -11,7 +11,23 @@ date = 2024-09-25T18:47:52+03:00
 ## Linux
 
 
-The Powkiddy X51 handheld console is relatively hard to develop mainline Linux for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.
+The S22+ is the most modern Samsung phone in mainline. With Exynos 2200, Samsung has done a lot of changes to its SoC design, largely due to the need of a high performance on a small node (4nm). I have upstreamed basic support with USB.
+
+{{< twocolumn 
+    "![alt](/images/s22.jpg)" 
+    "" >}}
+
+---
+
+The Samsung Galaxy S8 is definitely not an easy platform to work on. Its high-end exynos SoCs (even for 2017) has a large amount of buses like I2Cs, UARTs, HSI2Cs. Support for the device and the SoC I have gotten upstream since 6.13. Amongst the things that will be brought up in the future are USB, UFS, DECON and Mali G71 via Panfrost.
+
+{{< twocolumn 
+    "![alt](/images/s8_1.jpg)" 
+    "" >}}
+
+---
+
+The Powkiddy X51 handheld console is relatively tricky to develop mainline support for, because there are no official kernel sources, nor any kind of documentations for this platform. Both Powkiddy and Actions Semiconductor ignored all my emails, so a lot of things had to be reverse-engineered. Thankfully there also ancient kernel sources for a somewhat similar platform, from where I can borrow information about some registers.
 
 There are still some essential things that have to be brought up. For example:
 - due to the lack of information I only managed to write a partial pinctrl driver. It doesn't include any pin groups nor funcs, only gpio.
@@ -24,27 +40,13 @@ There are still some essential things that have to be brought up. For example:
 
 ---
 
-The Samsung Galaxy Xcover 3 Value edition, alongside the other devices with this SoC, have reached a point where they are close to being usable on my 6.11 kernel fork, with important hardware blocks like the Display engine, GPU, touchscreen and WIFI/BT working. Nevertheless it still has some issues that need resolving:
-- SMP isn't fully working and heavy wayland DEs like phosh are a bit unstable.
-- the DWC2 usb is.. weird.
+The Samsung Galaxy Xcover 3 VE features the Exynos 3475 (similar to Exynos 7580, which is upstream). One of the key differences is that it's ARMv7, hence why I have not put much effort into upstreaming my progress - it's old. However, my mainline fork with support for it has reached a point where graphics acceleration and touchscreen work.
 
-It still has to undergo upstreaming. Here's some pictures [and a short video showcasing hardware accelerated phosh.](https://i.imgur.com/fyVvY6o.mp4)
+Here's some pictures [and a short video showcasing hardware accelerated phosh.](https://i.imgur.com/fyVvY6o.mp4)
 
 {{< twocolumn 
     "![alt](/images/xcover3ve_2.jpg)" 
     "![alt](/images/xcover3ve_1.jpg)" >}}
-
----
-
-The Samsung Galaxy S8 is definitely not an easy platform to work on. As a high-end exynos SoCs (even though it's from 2017), it has complex peripherals and a large amount of buses like I2Cs, UARTs, HSI2Cs. Some more things need to be brought up, like:
-- the SPEEDY bus, which is used for PMIC
-- UFS
-- DECON
-- Mali G71 via Panfrost
-
-{{< twocolumn 
-    "![alt](/images/s8_1.jpg)" 
-    "" >}}
 
 ---
 
@@ -61,22 +63,11 @@ All progress for {MSM8x10, MSM8x12} has been done under the [Mainline4Lumia proj
 # uniLoader
 [uniLoader](https://github.com/ivoszbg/uniLoader) is a secondary bootloader that is capable of booting the upstream Linux kernel for Android and iOS-based devices. It allows embedding the kernel and DTB to it, making it a very minimalistic bootloader that doesn't require complex hardware drivers for stuff like storage. In fact, even MMU does not get enabled.
 
-The purpose behind it is to provide a small shim for avoiding vendors' bootloader quirks. For example:
+I have made it with the purpose to provide a small shim for avoiding vendor bootloader quirks. For example:
   - Exynos devices past 2016 leave decon's framebuffer refreshing disabled right before jumping to kernel, which makes initial debugging efforts when bringing up the platform to upstream linux hard
   - Some S-Boot releases have CNTFRQ_EL0 left unset, which causes issues since the linux timer driver cannot read its value and it SErrors. It either has to be set as a hardcoded frequency property in the DT, or passed via libfdt from uniLoader (the latter is cleaner, but still has to be implemented)
   
-The currently supported architectures are ARMV7 and AARCH64. Here's a list of the currently supported devices:
-- Apple iPhone 6
-- Samsung Galaxy Note 5
-- Samsung Galaxy Note 20
-- Samsung Galaxy A8 2018
-- Samsung Galaxy S6
-- Samsung Galaxy S8
-- Samsung Galaxy S9
-- Samsung Galaxy S20
-- Samsung Galaxy J4
-- Samsung Galaxy J5 2015
-- Samsung Galaxy Tab S6 Lite
+There are roughly 20 devices supported so far.
 
 ---
 # U-Boot

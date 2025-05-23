@@ -4,15 +4,9 @@ date = 2024-10-02T18:48:50+03:00
 ShowToc = "true"
 type = "post"
 +++
-## Mainline Linux on the Powkiddy X51
-
-For those who don't know, the Mainline Linux kernel (upstream) is the newest released and under-development version of the Linux kernel. Quite literally: [github.com/torvalds/linux](https://github.com/torvalds/linux).
-
 ### A bit of history
 
-I've been working on SoC and device bringup as a Linux kernel hobbyist for a while now (~4 years). One or two years ago, I got my hands on a handheld called Powkiddy X51, because why not :D. 
-
-At first, there wasn't much I could do: the system firmware files were stored on its NAND, and I couldn't find any exposed UART ports. I tried running a small custom ARM assembly binary to write to the framebuffer, but that didn't work, so I abandoned any further work.
+I've been working on SoC and device bringup as a Linux kernel hobbyist for a while now (~4 years). One or two years ago, I got my hands on a handheld device called Powkiddy X51. Of course, I did not intend to use it as-is. That's boring. So naturally, I started messing with it as sonn as I got it. At first, there wasn't much I could do: the system firmware files were stored on its NAND, and I couldn't find any exposed UART ports. I tried running a small custom arm binary to write to the framebuffer, but that didn't work, so I abandoned any further work.
 
 Recently (1 or 2 months ago), I decided to revisit the project since a friend of mine also bought the same console. After a lot of digging (there's almost **no** information about both the SoC and the device), I discovered the following:
 
@@ -49,7 +43,7 @@ It took quite a bit of work, but I managed to get the following peripherals work
 - Regulators (`actions,atc2603c`)
 - SimpleDRM (woo, display via framebuffer!)
 
-And **BOOM!** Arch Linux INITRAMFS with 4 fancy penguins on my handheld:
+And **BOOM!** Arch Linux initramfs with 4 fancy penguins on my handheld:
 
 ![alt](/images/bringing-mainline-linux-to-life-on-atm7051-handhelds-v0-rp5vjhpag0ld1.webp#center)
 

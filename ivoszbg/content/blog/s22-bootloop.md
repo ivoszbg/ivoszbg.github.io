@@ -4,13 +4,14 @@ date = 2025-01-12T20:10:30+02:00
 ShowToc = "true"
 type = "post"
 +++
+### Issues
 As some of you may know, there's been quite a lot of issues with the S22 lineup - from screen defects appearing out of nowhere to phones suddenly starting to crash and boot loop, with close to no information regarding the issues apart from posts here and there. If you don't want to read about specifics of how I found the problem and how I fixed it (in a way that's not not preferable), skip to the end of the post for a conclusion.
 
 **Please not that every device is different. What I'm describing here is my experience with my unit, yours may be different and could very well have a completely different issue.**
 
 Well, I've been focusing on mainline Linux kernel and driver development for Exynos devices in the past year or two and recently a friend of mine was kind enough to give me a small budget to get rid of the S8 I was working on and buy another device to work on. So, I went ahead and bought a boot looping Samsung Galaxy S22+ thinking it just had a software issue which would be fixed by flashing the stock firmware. And oh boy, was I wrong.
 
-## Investigating
+### Investigating
 Initially, I got the phone in a state where it was boot looping. This made me wonder - was the issue I was experiencing a software problem or a hardware? My first thought was to reset it to factory settings. For that I needed to either boot into download mode or reset it from the recovery. However, it wasn't even booting into recovery - it was consistently rebooting 2-3 seconds after the "Samsung Galaxy" logo was appearing. I went out and restored it with Odin via the download mode and the boot looping issue was still present.
 
 So, the issue was definitely hardware related. UFS seemed to work fine as restoring it via Odin gave no errors. So we're left with a few options - an issue with the SoC, the PMIC or some malfunctioning external component that could be causing early kernel panics like the camera. However, in order to find out what the issue is, I needed to be able to boot into android and unlock the bootloader.
@@ -83,7 +84,7 @@ writel(0x00, phy_base_regs + 0x01B4);
 
 So now that I know that PCIe0's PHY is failing, the quick way to fix this was to disable PCIe0 entirely in the device tree. I did that, repackaged the TWRP recovery, flashed it and it worked - android was boot looping while TWRP recovery was working fine! The next step was getting android to boot. After repackaging vendor_boot a few times until S-LK was not complaining about VBMETA issues and cleaning the data and metadata partitions, it booted straight into android. Awesome! Eeexcept that now WIFI doesn't work, only the modem.
 
-## Conclusion
+### Conclusion
 
 After all this mess, the conclusion is not so simple: there's a multitude of reasons this could be happening:
 
